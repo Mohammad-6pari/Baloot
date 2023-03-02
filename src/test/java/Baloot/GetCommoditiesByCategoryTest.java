@@ -90,11 +90,10 @@ public class GetCommoditiesByCategoryTest {
         JSONObject expectedResult = new JSONObject();
         expectedResult.put("id",3);
         expectedResult.put("name","commodity3");
-        expectedResult.put("price",1300);
         expectedResult.put("providerId",0);
+        expectedResult.put("price",1300);
         expectedResult.put("categories",new JSONArray().put("cate1"));
         expectedResult.put("rating",3);
-        expectedResult.put("inStock",3);
         JSONArray expectedArr = new JSONArray().put(expectedResult);
         assertEquals(response.getData().toString(),(new JSONObject().put("commoditiesListByCategory",expectedArr).toString()));
         assertEquals(response.getStatus().toString(), ResponseStatus.SUCCESS.toString());

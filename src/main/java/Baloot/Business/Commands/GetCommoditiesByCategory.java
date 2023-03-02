@@ -22,7 +22,13 @@ public class GetCommoditiesByCategory extends Command {
         List<Commodity> commodities = contextManager.getCommoditiesByCategory(data);
         List<CommodityResultDTO> items = commodities.stream().map(c -> new CommodityResultDTO(c)).collect(Collectors.toList());
         JSONObject json = new JSONObject();
-        json.put("commoditiesListByCategory", new JSONArray(items));
+        
+        JSONArray jsonArr = new JSONArray();
+        for(CommodityResultDTO item:items){
+            jsonArr.put(item.toJson());
+        }
+        json.put("commoditiesListByCategory", jsonArr);
+
         return new Response(ResponseStatus.SUCCESS, json);
     }
 }
