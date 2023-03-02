@@ -113,7 +113,7 @@ public class AddToBuyListTest {
         Response response1= addToBuyListCommand1.execute(contextManager);
 
         JSONObject expectedResult = new JSONObject();
-        expectedResult.put("errorMessage","Commodity exists on buyList");
+        expectedResult.put("errorMessage","This buy list item already exists");
         assertEquals(response1.getData().toString(),expectedResult.toString());
         assertEquals(response1.getStatus().toString(), ResponseStatus.FAILURE.toString());
     }
