@@ -4,11 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="" />
+    <list default="true" id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -18,17 +40,120 @@
     </option>
   </component>
   <component name="ProjectId" id="2MP5PSkJZ83WzPYHJZPcAF8faBv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;semeru-16&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IE/Baloot/Baloot/lib/json4s-ast_2.10-3.2.10.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.AddRateTests.rateNotExistUser">
+    <configuration name="AddRateTests.rateNotExistCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Baloot" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
+      <option name="METHOD_NAME" value="rateNotExistCommodity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddRateTests.rateNotExistUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Baloot" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
+      <option name="METHOD_NAME" value="rateNotExistUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddRateTests.rateNotIntCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Baloot" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
+      <option name="METHOD_NAME" value="rateNotIntCommodity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddRateTests.rateOutRangeCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Baloot" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
+      <option name="METHOD_NAME" value="rateOutRangeCommodity" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddRateTests.updateRateCommoditySc1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Baloot" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
+      <option name="METHOD_NAME" value="updateRateCommoditySc1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.AddRateTests.rateNotExistUser" />
+        <item itemvalue="JUnit.AddRateTests.rateNotExistCommodity" />
+        <item itemvalue="JUnit.AddRateTests.updateRateCommoditySc1" />
+        <item itemvalue="JUnit.AddRateTests.rateOutRangeCommodity" />
+        <item itemvalue="JUnit.AddRateTests.rateNotIntCommodity" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
