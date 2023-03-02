@@ -21,8 +21,12 @@ public class AddCommodityCommand extends Command {
             JSONObject json = new JSONObject();
             json.put("errorMessage", "Invalid providerId");
             return new Response(ResponseStatus.FAILURE, json);
-        } else {
-            return new Response(ResponseStatus.SUCCESS, contextManager.addCommodity(this.data).toJson());
         }
+        if (contextManager.getCommodity(data.id) != null) {
+            JSONObject json = new JSONObject();
+            json.put("errorMessage", "Commodity already exists");
+            return new Response(ResponseStatus.FAILURE, json);
+        }
+        return new Response(ResponseStatus.SUCCESS, contextManager.addCommodity(this.data).toJson());
     }
 }
