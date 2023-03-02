@@ -129,7 +129,8 @@ public class MemoryContextManager implements IContextManager {
 
     @Override
     public List<Commodity> getCommoditiesByCategory(String category) {
-        return commodities.stream().filter(c -> c.getCategories().contains(category)).toList();
+        return commodities.stream()
+            .filter(c -> c.getCategories().stream().anyMatch(category::contains)).toList();
     }
 
     @Override
