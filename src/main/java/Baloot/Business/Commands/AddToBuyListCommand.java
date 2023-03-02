@@ -27,6 +27,11 @@ public class AddToBuyListCommand extends Command {
             json.put("errorMessage", "Commodity does not exist");
             return new Response(ResponseStatus.FAILURE, json);
         }
+        if (contextManager.getBuyListItem(data.username, data.commodityId) != null) {
+            JSONObject json = new JSONObject();
+            json.put("errorMessage", "This buy list item already exists");
+            return new Response(ResponseStatus.FAILURE, json);
+        }
         return new Response(ResponseStatus.SUCCESS, contextManager.addToBuyList(this.data).toJson());
     }
 }
