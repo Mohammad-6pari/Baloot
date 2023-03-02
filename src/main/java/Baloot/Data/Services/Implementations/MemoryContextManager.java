@@ -6,6 +6,7 @@ import Baloot.Data.Services.IContextManager;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
     private final List<User> users;
@@ -130,12 +131,12 @@ public class MemoryContextManager implements IContextManager {
     @Override
     public List<Commodity> getCommoditiesByCategory(String category) {
         return commodities.stream()
-            .filter(c -> c.getCategories().stream().anyMatch(category::contains)).toList();
+            .filter(c -> c.getCategories().stream().anyMatch(category::contains)).collect(Collectors.toList());
     }
 
     @Override
     public List<Commodity> getBuyListByUsername(String username) {
-        List<Integer> items = buyListItems.stream().filter(i -> i.getUsername().equals(username)).map(i -> i.getCommodityId()).toList();
-        return commodities.stream().filter(c -> items.contains(c.getId())).toList();
+        List<Integer> items = buyListItems.stream().filter(i -> i.getUsername().equals(username)).map(i -> i.getCommodityId()).collect(Collectors.toList());
+        return commodities.stream().filter(c -> items.contains(c.getId())).collect(Collectors.toList());
     }
 }

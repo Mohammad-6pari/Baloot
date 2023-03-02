@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GetBuyListByUsername extends Command {
     final String data;
@@ -19,7 +20,7 @@ public class GetBuyListByUsername extends Command {
     @Override
     public Response execute(IContextManager contextManager) {
         List<Commodity> items = contextManager.getBuyListByUsername(data);
-        List<CommodityResultDTO> resultItems = items.stream().map(item -> new CommodityResultDTO(item)).toList();
+        List<CommodityResultDTO> resultItems = items.stream().map(item -> new CommodityResultDTO(item)).collect(Collectors.toList());
         JSONObject json = new JSONObject();
         json.put("buyList", new JSONArray(resultItems));
 

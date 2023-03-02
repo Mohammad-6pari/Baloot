@@ -10,6 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GetCommoditiesByCategory extends Command {
     final String data;
@@ -19,7 +20,7 @@ public class GetCommoditiesByCategory extends Command {
     @Override
     public Response execute(IContextManager contextManager) {
         List<Commodity> commodities = contextManager.getCommoditiesByCategory(data);
-        List<CommodityResultDTO> items = commodities.stream().map(c -> new CommodityResultDTO(c)).toList();
+        List<CommodityResultDTO> items = commodities.stream().map(c -> new CommodityResultDTO(c)).collect(Collectors.toList());
         JSONObject json = new JSONObject();
         json.put("commoditiesListByCategory", new JSONArray(items));
         return new Response(ResponseStatus.SUCCESS, json);
