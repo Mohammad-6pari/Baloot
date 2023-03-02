@@ -57,7 +57,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.GetCommoditiesByCategoryTest">
+  <component name="RunManager" selected="JUnit.AddRateTests">
     <configuration name="AddRateTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
@@ -73,7 +73,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCommoditiesByCategoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToBuyListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
         <pattern>
@@ -82,13 +82,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.GetCommoditiesByCategoryTest" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCommoditiesByCategoryTest.getCommodityNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToBuyListTest.notExistCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
         <pattern>
@@ -97,14 +97,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.GetCommoditiesByCategoryTest" />
-      <option name="METHOD_NAME" value="getCommodityNull" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
+      <option name="METHOD_NAME" value="notExistCommodity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GetCommoditiesByCategoryTest.getValidCommodityListSc1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToBuyListTest.rateNotExistUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
         <pattern>
@@ -113,14 +113,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.GetCommoditiesByCategoryTest" />
-      <option name="METHOD_NAME" value="getValidCommodityListSc1" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
+      <option name="METHOD_NAME" value="rateNotExistUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SearchCommodityByIdTest.searchValidCommoditySc2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AddToBuyListTest.repeatedCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
         <pattern>
@@ -129,8 +129,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.SearchCommodityByIdTest" />
-      <option name="METHOD_NAME" value="searchValidCommoditySc2" />
+      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
+      <option name="METHOD_NAME" value="repeatedCommodity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -138,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.GetCommoditiesByCategoryTest" />
-        <item itemvalue="JUnit.GetCommoditiesByCategoryTest.getValidCommodityListSc1" />
-        <item itemvalue="JUnit.GetCommoditiesByCategoryTest.getCommodityNull" />
         <item itemvalue="JUnit.AddRateTests" />
-        <item itemvalue="JUnit.SearchCommodityByIdTest.searchValidCommoditySc2" />
+        <item itemvalue="JUnit.AddToBuyListTest" />
+        <item itemvalue="JUnit.AddToBuyListTest.rateNotExistUser" />
+        <item itemvalue="JUnit.AddToBuyListTest.repeatedCommodity" />
+        <item itemvalue="JUnit.AddToBuyListTest.notExistCommodity" />
       </list>
     </recent_temporary>
   </component>
