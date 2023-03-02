@@ -12,6 +12,7 @@ import Baloot.Presentation.Response;
 import Baloot.Presentation.ResponseStatus;
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -19,7 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 
 public class AddRateTests {
     IContextManager contextManager;
@@ -163,6 +163,11 @@ public class AddRateTests {
         expectedResult.put("errorMessage","Invalid commodity or user");
         assertEquals(response.getData().toString(),expectedResult.toString());
 
+    }
+
+    @After
+    public void removeAddedData(){
+        contextManager = null;
     }
 
 

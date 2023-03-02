@@ -4,7 +4,6 @@ import Baloot.Business.Command;
 import Baloot.Business.Commands.*;
 import Baloot.Business.DTOs.CommodityDTO;
 import Baloot.Business.DTOs.ProviderDTO;
-import Baloot.Business.DTOs.RateCommodityDTO;
 import Baloot.Business.DTOs.UserDTO;
 import Baloot.Data.Services.IContextManager;
 import Baloot.Data.Services.Implementations.MemoryContextManager;
@@ -20,7 +19,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 
 public class SearchCommodityByIdTest {
     IContextManager contextManager;
@@ -118,6 +116,11 @@ public class SearchCommodityByIdTest {
         assertEquals(response.getData().toString(),expectedResult.toString());
         assertEquals(response.getStatus().toString(),ResponseStatus.SUCCESS.toString());
 
+    }
+
+    @After
+    public void removeAddedData(){
+        contextManager = null;
     }
 
 
