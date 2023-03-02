@@ -77,7 +77,7 @@ public class SearchCommodityByIdTest {
         Response response= rateCommodityCommand.execute(contextManager);
 
         JSONObject expectedResult = new JSONObject();
-        expectedResult.put("errorMessages","commodity not found");
+        expectedResult.put("errorMessage","commodity not found");
         assertEquals(response.getData().toString(),expectedResult.toString());
         assertEquals(response.getStatus().toString(),ResponseStatus.FAILURE.toString());
     }

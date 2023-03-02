@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +19,24 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="REMOTE">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -57,7 +73,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.AddRateTests">
+  <component name="RunManager" selected="JUnit.All in Baloot">
     <configuration name="AddRateTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Baloot" />
       <extension name="coverage">
@@ -84,22 +100,6 @@
       <option name="PACKAGE_NAME" value="Baloot" />
       <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddToBuyListTest.notExistCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baloot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
-      <option name="METHOD_NAME" value="notExistCommodity" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -136,13 +136,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="All in Baloot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Baloot" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Baloot" />
+        <item itemvalue="JUnit.AddToBuyListTest.repeatedCommodity" />
         <item itemvalue="JUnit.AddRateTests" />
         <item itemvalue="JUnit.AddToBuyListTest" />
         <item itemvalue="JUnit.AddToBuyListTest.rateNotExistUser" />
-        <item itemvalue="JUnit.AddToBuyListTest.repeatedCommodity" />
-        <item itemvalue="JUnit.AddToBuyListTest.notExistCommodity" />
       </list>
     </recent_temporary>
   </component>
@@ -156,5 +164,10 @@
       <updated>1677656353856</updated>
     </task>
     <servers />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Baloot$AddRateTests.ic" NAME="AddRateTests Coverage Results" MODIFIED="1677754956715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Baloot.*</FILTER>
+    </SUITE>
   </component>
 </project>
