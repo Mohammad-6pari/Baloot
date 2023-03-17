@@ -14,8 +14,6 @@ import io.javalin.Javalin;
 public class Main {
     public static IContextManager contextManager = new MemoryContextManager();
     public static void main(String[] args) {
-        IContextManager contextManager = new MemoryContextManager();
-
         var app = Javalin.create().start(7070);
 
         app.get("/commodities", ctx -> ctx.html(processCommand(new GetCommoditiesListCommand())));
@@ -54,7 +52,13 @@ public class Main {
             ctx.html(processCommand(new RateCommodityCommand(rateItem)));
         });
 
-        app.get("/voteComment/{username}/{comment_id}/{vote}", ctx -> ctx.result("User" + ctx.pathParam("username") + "voted " + ctx.pathParam("comment_id") + " " + ctx.pathParam("vote")));
+        app.get("/voteComment/{username}/{comment_id}/{vote}", ctx ->
+                ctx.html(processCommand(new VoteCommentCommand(
+                        ctx.pathParam("username"),
+                        Integer.parseInt(ctx.pathParam("comment_id")),
+                        Integer.parseInt(ctx.pathParam("vote"))
+                )))
+        );
 
         app.get("/commodities/search/{start_price}/{end_price}", ctx ->
                 ctx.html(processCommand(new GetCommoditiesByPrice(Integer.parseInt(ctx.pathParam("start_price")), Integer.parseInt(ctx.pathParam("end_price")))))

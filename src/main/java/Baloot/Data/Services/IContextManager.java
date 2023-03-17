@@ -24,4 +24,7 @@ public interface IContextManager {
     List<Commodity> getCommoditiesByCategory(String category);
     List<Commodity> getCommoditiesByPrice(Integer startPrice, Integer endPrice);
     List<Commodity> getBuyListByUsername(String username);
+    CommentVote voteComment(String username, Integer commentId, Integer vote);
+    CommentVote getCommentVote(String username, Integer commentId);
+    Comment getComment(Integer commentId);
 }

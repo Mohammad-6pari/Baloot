@@ -18,6 +18,8 @@ public class MemoryContextManager implements IContextManager {
     private final List<User> users;
     private final List<Provider> providers;
     private final List<Commodity> commodities;
+    private final List<Comment> comments;
+    private final List<CommentVote> commentVotes;
     private final List<CommodityRate> commodityRates;
     private final List<BuyListItem> buyListItems;
 
@@ -96,10 +98,35 @@ public class MemoryContextManager implements IContextManager {
             return new ArrayList<>();
         }
     }
+
+    private List<Comment> getCommentsFromApi() {
+        try {
+            Document doc = Jsoup.connect(BASE_URL + "/comments").ignoreContentType(true).get();
+            JSONArray jsonArray = new JSONArray(doc.body().text());
+            List<Comment> apiComments = new ArrayList<>();
+
+            for(int i = 0; i < jsonArray.length(); i++) {
+                var comment = jsonArray.getJSONObject(i);
+                apiComments.add(new Comment(
+                                i,
+                                comment.getString("date"),
+                                comment.getString("userEmail"),
+                                comment.getInt("commodityId"),
+                                comment.getString("text")
+                        )
+                );
+            }
+            return apiComments;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
     public MemoryContextManager() {
         this.users = getUsersFromApi();
         this.providers = getProvidersFromApi();
         this.commodities = getCommoditiesFromApi();
+        this.comments = getCommentsFromApi();
+        this.commentVotes = new ArrayList<>();
         this.commodityRates = new ArrayList<>();
         this.buyListItems = new ArrayList<>();
     }
@@ -238,5 +265,29 @@ public class MemoryContextManager implements IContextManager {
     public List<Commodity> getBuyListByUsername(String username) {
         List<Integer> items = buyListItems.stream().filter(i -> i.getUsername().equals(username)).map(i -> i.getCommodityId()).collect(Collectors.toList());
         return commodities.stream().filter(c -> items.contains(c.getId())).collect(Collectors.toList());
+    }
+
+    @Override
+    public CommentVote voteComment(String username, Integer commentId, Integer vote) {
+        var commentVote = getCommentVote(username, commentId);
+        if (commentVote == null) {
+            commentVote = new CommentVote(username, commentId, vote);
+            commentVotes.add(commentVote);
+        } else {
+            commentVote.setVote(vote);
+        }
+        return commentVote;
+    }
+
+    @Override
+    public CommentVote getCommentVote(String username, Integer commentId) {
+        return commentVotes.stream()
+                .filter(v -> v.getCommentId() == commentId && v.getUsername().equals(username))
+                .findFirst().orElse(null);
+    }
+
+    @Override
+    public Comment getComment(Integer commentId) {
+        return comments.stream().filter(c -> c.getId() == commentId).findFirst().orElse(null);
     }
 }
