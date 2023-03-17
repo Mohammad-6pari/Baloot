@@ -72,8 +72,32 @@ public class MemoryContextManager implements IContextManager {
             return new ArrayList<>();
         }
     }
+
+    private List<User> getUsersFromApi() {
+        try {
+            Document doc = Jsoup.connect(BASE_URL + "/users").ignoreContentType(true).get();
+            JSONArray jsonArray = new JSONArray(doc.body().text());
+            List<User> apiUsers = new ArrayList<>();
+
+            for(int i = 0; i < jsonArray.length(); i++) {
+                var user = jsonArray.getJSONObject(i);
+                apiUsers.add(new User(
+                        user.getString("username"),
+                        user.getString("password"),
+                        user.getString("email"),
+                        user.getString("birthDate"),
+                        user.getString("address"),
+                        user.getInt("credit")
+                    )
+                );
+            }
+            return apiUsers;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
     public MemoryContextManager() {
-        this.users = new ArrayList<>();
+        this.users = getUsersFromApi();
         this.providers = getProvidersFromApi();
         this.commodities = getCommoditiesFromApi();
         this.commodityRates = new ArrayList<>();
