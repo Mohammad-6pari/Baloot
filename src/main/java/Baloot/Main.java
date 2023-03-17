@@ -28,7 +28,9 @@ public class Main {
 
         app.get("/users/{user_id}", ctx -> ctx.html(processCommand(new GetUserByUsername(ctx.pathParam("user_id")))));
 
-        app.get("/addCredit/{user_id}/{credit}", ctx -> ctx.result("Add " + ctx.pathParam("credit") + " credit to user with Id: " + ctx.pathParam("user_id")));
+        app.get("/addCredit/{user_id}/{credit}", ctx ->
+            ctx.html(processCommand(new AddUserCredit(ctx.pathParam("user_id"), Integer.parseInt(ctx.pathParam("credit")))))
+        );
 
         app.get("/addToBuyList/{username}/{commodity_id}", ctx -> {
             var item = new BuyListItemDTO();

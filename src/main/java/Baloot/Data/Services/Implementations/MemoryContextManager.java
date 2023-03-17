@@ -114,6 +114,16 @@ public class MemoryContextManager implements IContextManager {
         User tempUser = users.stream().filter(user->username.equals(user.getUsername())).findFirst().orElse(null);
         return tempUser;
     }
+
+    @Override
+    public User AddUserCredit(String username, Integer amount) {
+        User user = getUser(username);
+        if (user != null && amount > 0) {
+            user.setCredit(user.getCredit() + amount);
+        }
+        return user;
+    }
+
     @Override
     public User updateUser(UserDTO userDTO) {
         User tempUser = users.stream().filter(user->userDTO.username.equals(user.getUsername())).findFirst().orElse(null);
