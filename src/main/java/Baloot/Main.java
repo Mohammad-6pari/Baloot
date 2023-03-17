@@ -24,7 +24,7 @@ public class Main {
                 ctx.html(processCommand(new GetCommodityById(Integer.parseInt(ctx.pathParam("commodity_id")))))
         );
 
-        app.get("/provider/{provider_id}", ctx -> ctx.result());
+        app.get("/providers/{provider_id}", ctx -> ctx.html(processCommand(new GetProviderById(Integer.parseInt(ctx.pathParam("provider_id"))))));
 
         app.get("/users/{user_id}", ctx -> ctx.html(processCommand(new GetUserByUsername(ctx.pathParam("user_id")))));
 

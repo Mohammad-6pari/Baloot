@@ -21,10 +21,12 @@ public class AddUserCredit extends Command {
         if (user == null) {
             JSONObject json = new JSONObject();
             json.put("errorMessage", "User not found");
+            return new Response(ResponseStatus.FAILURE, json);
         }
         if (amount <= 0) {
             JSONObject json = new JSONObject();
             json.put("errorMessage", "Invalid amount");
+            return new Response(ResponseStatus.FAILURE, json);
         }
         return new Response(ResponseStatus.SUCCESS, contextManager.AddUserCredit(username, amount).toJson());
     }
