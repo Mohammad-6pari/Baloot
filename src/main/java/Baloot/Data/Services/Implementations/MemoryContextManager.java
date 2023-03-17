@@ -3,23 +3,79 @@ package Baloot.Data.Services.Implementations;
 import Baloot.Business.DTOs.*;
 import Baloot.Data.Entity.*;
 import Baloot.Data.Services.IContextManager;
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
+    private final String BASE_URL = "http://5.253.25.110:5000/api";
     private final List<User> users;
     private final List<Provider> providers;
     private final List<Commodity> commodities;
     private final List<CommodityRate> commodityRates;
     private final List<BuyListItem> buyListItems;
 
+    private List<Commodity> getCommoditiesFromApi() {
+        try {
+            Document doc = Jsoup.connect(BASE_URL + "/commodities").ignoreContentType(true).get();
+            JSONArray jsonArray = new JSONArray(doc.body().text());
+            List<Commodity> apiCommodities = new ArrayList<>();
 
+            for(int i = 0; i < jsonArray.length(); i++) {
+                var commodity = jsonArray.getJSONObject(i);
+                var categories = new ArrayList<String>();
+                for (int j = 0; j < commodity.getJSONArray("categories").length(); j++) {
+                    categories.add(commodity.getJSONArray("categories").getString(j));
+                }
+                apiCommodities.add(new Commodity(
+                        commodity.getInt("id"),
+                        commodity.getString("name"),
+                        commodity.getInt("providerId"),
+                        commodity.getInt("price"),
+                        categories,
+                        commodity.getFloat("rating"),
+                        commodity.getInt("inStock")
+                    )
+                );
+            }
+
+            return apiCommodities;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
+
+    private List<Provider> getProvidersFromApi() {
+        try {
+            Document doc = Jsoup.connect(BASE_URL + "/providers").ignoreContentType(true).get();
+            JSONArray jsonArray = new JSONArray(doc.body().text());
+            List<Provider> apiProviders = new ArrayList<>();
+
+
+            for(int i = 0; i < jsonArray.length(); i++) {
+                var provider = jsonArray.getJSONObject(i);
+                apiProviders.add(new Provider(
+                        provider.getInt("id"),
+                        provider.getString("name"),
+                        provider.getString("registryDate")
+                    )
+                );
+            }
+            return apiProviders;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
     public MemoryContextManager() {
         this.users = new ArrayList<>();
-        this.providers = new ArrayList<>();
-        this.commodities = new ArrayList<>();
+        this.providers = getProvidersFromApi();
+        this.commodities = getCommoditiesFromApi();
         this.commodityRates = new ArrayList<>();
         this.buyListItems = new ArrayList<>();
     }
@@ -132,6 +188,12 @@ public class MemoryContextManager implements IContextManager {
     public List<Commodity> getCommoditiesByCategory(String category) {
         return commodities.stream()
             .filter(c -> c.getCategories().stream().anyMatch(category::contains)).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<Commodity> getCommoditiesByPrice(Integer startPrice, Integer endPrice) {
+        return commodities.stream()
+            .filter(c -> c.getPrice() >= startPrice && c.getPrice() <= endPrice).collect(Collectors.toList());
     }
 
     @Override

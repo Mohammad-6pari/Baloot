@@ -21,5 +21,6 @@ public interface IContextManager {
     BuyListItem getBuyListItem(String username, Integer commodityId);
     BuyListItem removeBuyListItem(BuyListItemDTO buyListItemDTO);
     List<Commodity> getCommoditiesByCategory(String category);
+    List<Commodity> getCommoditiesByPrice(Integer startPrice, Integer endPrice);
     List<Commodity> getBuyListByUsername(String username);
 }
