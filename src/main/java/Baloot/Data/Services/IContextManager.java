@@ -8,6 +8,9 @@ import java.util.List;
 public interface IContextManager {
     User addNewUser(UserDTO userDTO);
     User getUser(String username);
+    User loginUser(String username, String password);
+    boolean isUserAuthenticated();
+    User getLoggedinUser();
     User AddUserCredit(String username, Integer amount);
     User updateUser(UserDTO userDTO);
     Provider addProvider(ProviderDTO providerDTO);

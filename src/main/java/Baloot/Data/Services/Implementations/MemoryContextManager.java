@@ -4,7 +4,6 @@ import Baloot.Business.DTOs.*;
 import Baloot.Data.Entity.*;
 import Baloot.Data.Services.IContextManager;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
@@ -16,6 +15,7 @@ import java.util.stream.Collectors;
 public class MemoryContextManager implements IContextManager {
     private final String BASE_URL = "http://5.253.25.110:5000/api";
     private final List<User> users;
+    private User loggedinUser;
     private final List<Provider> providers;
     private final List<Commodity> commodities;
     private final List<Comment> comments;
@@ -123,6 +123,7 @@ public class MemoryContextManager implements IContextManager {
     }
     public MemoryContextManager() {
         this.users = getUsersFromApi();
+        this.loggedinUser = null;
         this.providers = getProvidersFromApi();
         this.commodities = getCommoditiesFromApi();
         this.comments = getCommentsFromApi();
@@ -140,6 +141,27 @@ public class MemoryContextManager implements IContextManager {
     public User getUser(String username) {
         User tempUser = users.stream().filter(user->username.equals(user.getUsername())).findFirst().orElse(null);
         return tempUser;
+    }
+
+    @Override
+    public User loginUser(String username, String password) {
+        if (loggedinUser != null) return null;
+        User user = getUser(username);
+        if (user != null && user.getPassword().equals(password)) {
+            loggedinUser = user;
+            return user;
+        }
+        return null;
+    }
+
+    @Override
+    public boolean isUserAuthenticated() {
+        return loggedinUser != null;
+    }
+
+    @Override
+    public User getLoggedinUser() {
+        return loggedinUser;
     }
 
     @Override

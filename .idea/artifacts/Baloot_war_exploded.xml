@@ -36,6 +36,7 @@
           <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.21" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.7.31" />
           <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.14.3" />
+          <element id="library" level="project" name="Maven: org.json:json:20220924" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="Baloot/web/Web" />

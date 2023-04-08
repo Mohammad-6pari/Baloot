@@ -10,67 +10,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Baloot_war_exploded.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Baloot.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Command.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddCommodityCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddProviderCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddToBuyListCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddUserCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddUserCredit.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetBuyListByUsername.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesByCategory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesByPrice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesListCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommodityById.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetProviderById.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetUserByUsername.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/InvalidCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/RateCommodityCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/RemoveBuyListItemCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/VoteCommentCommand.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/BuyListItemDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/CommodityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/CommodityResultDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/ProviderDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/RateCommodityDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/UserDTO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/BuyListItem.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Category.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Comment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/CommentVote.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Commodity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/CommodityRate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/IEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Provider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Commands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/IView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Implementations/ConsoleView.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Response.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/ResponseStatus.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/AddRateTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/AddToBuyListTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/GetCommoditiesByCategoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/SearchCommodityByIdTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Controllers/HomeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Controllers/HomeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/IContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/IContextManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -90,30 +51,33 @@
     </option>
   </component>
   <component name="ProjectId" id="2O66yrp6K7ySF8wF0F1lLDYby4y" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "phase3",
-    "last_opened_file_path": "/Users/MohammadMehdi/Project/Baloot3",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;phase3&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/MohammadMehdi/Project/Baloot3&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -226,10 +190,27 @@
       <workItem from="1680868942770" duration="2645000" />
       <workItem from="1680871680333" duration="464000" />
       <workItem from="1680880656818" duration="7435000" />
+      <workItem from="1680931495747" duration="2154000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java</url>
+          <line>147</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java</url>
+          <line>79</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

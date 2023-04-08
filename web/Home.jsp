@@ -1,11 +1,16 @@
-<%@page import="Baloot.Context.UserContext"%>
+<%@page import="Baloot.Data.Entity.User"%>
+
+<%
+    User user = (User)request.getAttribute("user");
+%>
+
 <html lang="en"><head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
 <ul>
-    <li id="email">username: <%=UserContext.username%></li>
+    <li id="email">username: <%=user.getUsername()%></li>
     <li>
         <a href="/commodities">Commodities</a>
     </li>
