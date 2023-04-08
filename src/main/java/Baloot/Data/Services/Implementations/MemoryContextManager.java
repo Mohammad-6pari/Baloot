@@ -160,6 +160,11 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
+    public void logoutUser() {
+        loggedinUser = null;
+    }
+
+    @Override
     public User getLoggedinUser() {
         return loggedinUser;
     }

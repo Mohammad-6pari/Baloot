@@ -11,6 +11,7 @@ public interface IContextManager {
     User getUser(String username);
     User loginUser(String username, String password);
     boolean isUserAuthenticated();
+    void logoutUser();
     User getLoggedinUser();
     User AddUserCredit(String username, Integer amount);
     User updateUser(UserDTO userDTO);
