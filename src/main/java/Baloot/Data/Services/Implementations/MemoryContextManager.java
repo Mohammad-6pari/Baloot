@@ -242,7 +242,7 @@ public class MemoryContextManager implements IContextManager {
             commodity.setInStock(commodity.getInStock() + 1);
             var newList = buyListItems.stream()
                 .filter(i -> !i.getCommodityId().equals(buyListItemDTO.commodityId) && !i.getUsername().equals(buyListItemDTO.username))
-                    .toList();
+                    .collect(Collectors.toList());
             buyListItems.clear();
             buyListItems.addAll(newList);
         }

@@ -1,173 +1,235 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Baloot:war exploded" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="" />
+    <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Baloot_war_exploded.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Baloot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddCommodityCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddProviderCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddToBuyListCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddUserCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/AddUserCredit.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetBuyListByUsername.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesByCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesByPrice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommoditiesListCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetCommodityById.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetProviderById.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/GetUserByUsername.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/InvalidCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/RateCommodityCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/RemoveBuyListItemCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/Commands/VoteCommentCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/BuyListItemDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/CommodityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/CommodityResultDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/ProviderDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/RateCommodityDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/UserDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/BuyListItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Comment.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/CommentVote.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Commodity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/CommodityRate.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/IEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/Provider.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Commands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/IView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Implementations/ConsoleView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Presentation/ResponseStatus.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/AddRateTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/AddToBuyListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/GetCommoditiesByCategoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Baloot/SearchCommodityByIdTest.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <excluded-from-favorite>
-      <branch-storage>
-        <map>
-          <entry type="REMOTE">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="origin/master" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </excluded-from-favorite>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
   </component>
   <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2MP5PSkJZ83WzPYHJZPcAF8faBv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
-  </component>
+  <component name="ProjectId" id="2O66yrp6K7ySF8wF0F1lLDYby4y" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;semeru-16&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/IE/Baloot/Baloot/lib/json4s-ast_2.10-3.2.10.jar&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "phase3",
+    "last_opened_file_path": "/Users/MohammadMehdi/Project/Baloot3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.All in Baloot">
-    <configuration name="AddRateTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baloot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.AddRateTests" />
-      <option name="TEST_OBJECT" value="class" />
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn clean" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Baloot:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="96103a21-6ede-44be-809c-887a61e8491d" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="56958" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Baloot:war exploded" />
+        </option>
       </method>
     </configuration>
-    <configuration name="AddToBuyListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baloot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddToBuyListTest.rateNotExistUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baloot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
-      <option name="METHOD_NAME" value="rateNotExistUser" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AddToBuyListTest.repeatedCommodity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baloot.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Baloot" />
-      <option name="MAIN_CLASS_NAME" value="Baloot.AddToBuyListTest" />
-      <option name="METHOD_NAME" value="repeatedCommodity" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Baloot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Baloot" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.All in Baloot" />
-        <item itemvalue="JUnit.AddToBuyListTest.repeatedCommodity" />
-        <item itemvalue="JUnit.AddRateTests" />
-        <item itemvalue="JUnit.AddToBuyListTest" />
-        <item itemvalue="JUnit.AddToBuyListTest.rateNotExistUser" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c8d5d9d1-b7be-47fd-8701-1d521fede342" name="Changes" comment="" />
-      <created>1677656353856</created>
+      <changelist id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="" />
+      <created>1680868941660</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677656353856</updated>
+      <updated>1680868941660</updated>
+      <workItem from="1680868942770" duration="2645000" />
+      <workItem from="1680871680333" duration="464000" />
+      <workItem from="1680880656818" duration="7435000" />
     </task>
     <servers />
   </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Baloot$AddRateTests.ic" NAME="AddRateTests Coverage Results" MODIFIED="1677754956715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>Baloot.*</FILTER>
-    </SUITE>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
