@@ -8,6 +8,7 @@
 
 <%
   Commodity commodity = (Commodity) request.getAttribute("commodity");
+  List<Commodity> suggestions = (ArrayList<Commodity>)request.getAttribute("suggestions");
   List<Comment> comments = (ArrayList<Comment>) request.getAttribute("comments");
   String username = (String) request.getAttribute("username");
 %>
@@ -90,5 +91,35 @@
   <% } %>
 </table>
 <br><br>
+<table>
+  <caption><h2>Suggested Commodities</h2></caption>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Provider Name</th>
+    <th>Price</th>
+    <th>Categories</th>
+    <th>Rating</th>
+    <th>In Stock</th>
+    <th>Links</th>
+  </tr>
+  <% for(Commodity suggestion : suggestions) { %>
+  <tr>
+    <td><%=suggestion.getId()%></td>
+    <td><%=suggestion.getName()%></td>
+    <td><%=suggestion.getProviderId()%></td>
+    <td><%=suggestion.getPrice()%></td>
+    <%
+      List<String> categoryList = new ArrayList<>(suggestion.getCategories());
+      String categoryString = String.join(", ", categoryList);
+    %>
+    <td><%= categoryString %></td>
+
+    <td><%=suggestion.getRating()%></td>
+    <td><%=suggestion.getInStock()%></td>
+    <td><a href="/commodities/<%=suggestion.getId()%>">Link</a></td>
+  </tr>
+  <% } %>
+</table>
 </body>
 </html>

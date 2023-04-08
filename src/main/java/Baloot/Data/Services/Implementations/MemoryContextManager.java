@@ -9,10 +9,7 @@ import org.jsoup.nodes.Document;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
@@ -277,6 +274,16 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
+    public List<Commodity> getCommoditiesByCategory(List<String> categories) {
+        return commodities.stream().filter(c -> {
+            for (String category : categories)
+                if (c.getCategories().contains(category))
+                    return true;
+            return false;
+        }).collect(Collectors.toList());
+    }
+
+    @Override
     public List<Commodity> getCommoditiesByCategory(String category) {
         return commodities.stream()
             .filter(c -> c.getCategories().stream().anyMatch(category::contains)).collect(Collectors.toList());
@@ -359,7 +366,7 @@ public class MemoryContextManager implements IContextManager {
         var totalPrice = getBuyListTotalPrice(username);
         if (user.getCredit() < totalPrice)
             return;
-        
+
         user.setCredit(user.getCredit() - totalPrice);
         var newBuyListItems = buyListItems.stream()
                 .filter(i -> !i.getUsername().equals(username)).collect(Collectors.toList());

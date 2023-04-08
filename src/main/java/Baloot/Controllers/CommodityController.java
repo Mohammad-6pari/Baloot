@@ -25,6 +25,7 @@ public class CommodityController extends HttpServlet {
                 resp.sendRedirect("/commodities");
             else {
                 req.setAttribute("commodity", commodity);
+                req.setAttribute("suggestions", contextManager.getCommoditiesByCategory(commodity.getCategories()));
                 req.setAttribute("comments", contextManager.getCommodityComments(commodity.getId()));
                 var dispatcher = req.getRequestDispatcher("/Commodity.jsp");
                 dispatcher.forward(req, resp);
