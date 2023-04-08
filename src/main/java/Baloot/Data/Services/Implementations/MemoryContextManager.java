@@ -22,6 +22,7 @@ public class MemoryContextManager implements IContextManager {
     private final List<CommentVote> commentVotes;
     private final List<CommodityRate> commodityRates;
     private final List<BuyListItem> buyListItems;
+    private final List<Discount> discounts;
 
     private List<Commodity> getCommoditiesFromApi() {
         try {
@@ -121,6 +122,26 @@ public class MemoryContextManager implements IContextManager {
             return new ArrayList<>();
         }
     }
+
+    private List<Discount> getDiscountsFromApi() {
+        try {
+            Document doc = Jsoup.connect(BASE_URL + "/discount").ignoreContentType(true).get();
+            JSONArray jsonArray = new JSONArray(doc.body().text());
+            List<Discount> apiDiscounts = new ArrayList<>();
+
+            for(int i = 0; i < jsonArray.length(); i++) {
+                var discount = jsonArray.getJSONObject(i);
+                apiDiscounts.add(new Discount(
+                         discount.getString("discountCode"),
+                         discount.getInt("discount")
+                     )
+                );
+            }
+            return apiDiscounts;
+        } catch (IOException e) {
+            return new ArrayList<>();
+        }
+    }
     public MemoryContextManager() {
         this.users = getUsersFromApi();
         this.loggedinUser = null;
@@ -130,6 +151,7 @@ public class MemoryContextManager implements IContextManager {
         this.commentVotes = new ArrayList<>();
         this.commodityRates = new ArrayList<>();
         this.buyListItems = new ArrayList<>();
+        this.discounts = getDiscountsFromApi();
     }
     @Override
     public User addNewUser(UserDTO userDTO) {
@@ -373,6 +395,7 @@ public class MemoryContextManager implements IContextManager {
             return;
 
         user.setCredit(user.getCredit() - totalPrice);
+        user.useCurrentDiscount();
         var newBuyListItems = buyListItems.stream()
                 .filter(i -> !i.getUsername().equals(username)).collect(Collectors.toList());
         buyListItems.clear();
@@ -380,8 +403,26 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
+    public Discount getDiscount(String code) {
+        return discounts.stream().filter(d -> d.getCode().equals(code)).findFirst().orElse(null);
+    }
+
+    @Override
+    public void applyDiscount(String username, String code) {
+        var user = getUser(username);
+        var discount = getDiscount(code);
+        if (discount == null) return;
+        if (user.getUsedDiscounts().stream().anyMatch(d -> d.getCode().equals(code)))
+            return;
+        user.setCurrentDiscount(discount);
+    }
+
+    @Override
     public Integer getBuyListTotalPrice(String username) {
-        return getBuyListByUsername(username)
-                .stream().mapToInt(Commodity::getPrice).sum();
+        var sum = getBuyListByUsername(username).stream().mapToInt(Commodity::getPrice).sum();
+        var discount = getUser(username).getCurrentDiscount();
+        if (discount != null)
+            sum = sum * (100 - discount.getDiscount()) / 100;
+        return sum;
     }
 }

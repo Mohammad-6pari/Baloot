@@ -37,5 +37,7 @@ public interface IContextManager {
     Comment addComment(String userEmail, Integer commodityId, String text);
     List<Comment> getCommodityComments(Integer commodityId);
     void submitBuyList(String username);
+    Discount getDiscount(String code);
+    void applyDiscount(String username, String code);
     Integer getBuyListTotalPrice(String username);
 }

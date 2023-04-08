@@ -2,6 +2,9 @@ package Baloot.Data.Entity;
 
 import org.json.JSONObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class User implements IEntity {
     private final String username;
     private String password;
@@ -9,6 +12,27 @@ public class User implements IEntity {
     private String birthDate;
     private String address;
     private Integer credit;
+    private Discount currentDiscount;
+    private List<Discount> usedDiscounts;
+
+    public List<Discount> getUsedDiscounts() {
+        return usedDiscounts;
+    }
+
+    public void useCurrentDiscount() {
+        if (currentDiscount != null) {
+            this.usedDiscounts.add(currentDiscount);
+            currentDiscount = null;
+        }
+    }
+
+    public Discount getCurrentDiscount() {
+        return currentDiscount;
+    }
+
+    public void setCurrentDiscount(Discount currentDiscount) {
+        this.currentDiscount = currentDiscount;
+    }
 
     public String getUsername() {
         return username;
@@ -62,6 +86,8 @@ public class User implements IEntity {
         this.birthDate = birthDate;
         this.address = address;
         this.credit = credit;
+        this.usedDiscounts = new ArrayList<>();
+        this.currentDiscount = null;
     }
 
     @Override

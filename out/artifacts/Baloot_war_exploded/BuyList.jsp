@@ -68,7 +68,7 @@
         <td><%=categoryString%></td>
         <td><%=commodity.getRating()%></td>
         <td><%=commodity.getInStock()%></td>
-        <td><a href="/commodities/<%=commodity.getId()%>>">Link</a></td>
+        <td><a href="/commodities/<%=commodity.getId()%>">Link</a></td>
         <td>
             <form action="/removeFromBuyList/<%=commodity.getId()%>" method="POST">
                 <button type="submit">Remove</button>
@@ -80,8 +80,13 @@
 <br>
 <label>Add Your Discount Code:</label>
 <form action="/addDiscount" method="post">
-    <input type="text" name="discount" value="" />
+    <input type="text" name="code" value="" />
     <button type="submit">submit</button>
 </form>
+<%if (user.getCurrentDiscount() != null) {%>
+    <p>Your Currently activated code: <%=user.getCurrentDiscount().getCode()%>
+        (<%=user.getCurrentDiscount().getDiscount()%> %)
+    </p>
+<%}%>
 <br>
 </body></html>
