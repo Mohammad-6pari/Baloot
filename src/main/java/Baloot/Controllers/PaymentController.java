@@ -1,6 +1,5 @@
 package Baloot.Controllers;
 
-import Baloot.Business.DTOs.BuyListItemDTO;
 import Baloot.Data.Services.ContextLoader;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -10,19 +9,16 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/addToBuyList/*")
-public class AddToBuyListController extends HttpServlet {
+@WebServlet("/payment")
+public class PaymentController extends HttpServlet {
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var contextManager = ContextLoader.getContextManager();
 
         var user = contextManager.getLoggedinUser();
         if (user == null) resp.sendRedirect("/login");
         else {
-            var buyListItem = new BuyListItemDTO();
-            buyListItem.commodityId = Integer.valueOf(req.getPathInfo().split("/")[1]);
-            buyListItem.username = user.getUsername();
-            contextManager.addToBuyList(buyListItem);
+            contextManager.submitBuyList(user.getUsername());
             resp.sendRedirect("/buyList");
         }
     }

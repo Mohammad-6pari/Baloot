@@ -352,4 +352,24 @@ public class MemoryContextManager implements IContextManager {
         return comments.stream().filter(c -> c.getCommodityId().equals(commodityId))
                 .peek(this::setCommentLikes).collect(Collectors.toList());
     }
+
+    @Override
+    public void submitBuyList(String username) {
+        var user = getUser(username);
+        var totalPrice = getBuyListTotalPrice(username);
+        if (user.getCredit() < totalPrice)
+            return;
+        
+        user.setCredit(user.getCredit() - totalPrice);
+        var newBuyListItems = buyListItems.stream()
+                .filter(i -> !i.getUsername().equals(username)).collect(Collectors.toList());
+        buyListItems.clear();
+        buyListItems.addAll(newBuyListItems);
+    }
+
+    @Override
+    public Integer getBuyListTotalPrice(String username) {
+        return getBuyListByUsername(username)
+                .stream().mapToInt(Commodity::getPrice).sum();
+    }
 }

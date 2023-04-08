@@ -10,8 +10,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet("/addToBuyList/*")
-public class AddToBuyListController extends HttpServlet {
+@WebServlet("/removeFromBuyList/*")
+public class RemoveBuyListItemController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         var contextManager = ContextLoader.getContextManager();
@@ -20,9 +20,9 @@ public class AddToBuyListController extends HttpServlet {
         if (user == null) resp.sendRedirect("/login");
         else {
             var buyListItem = new BuyListItemDTO();
-            buyListItem.commodityId = Integer.valueOf(req.getPathInfo().split("/")[1]);
             buyListItem.username = user.getUsername();
-            contextManager.addToBuyList(buyListItem);
+            buyListItem.commodityId = Integer.valueOf(req.getPathInfo().split("/")[1]);
+            contextManager.removeBuyListItem(buyListItem);
             resp.sendRedirect("/buyList");
         }
     }

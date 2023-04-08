@@ -1,12 +1,12 @@
-<%@ page import="Baloot.Context.UserContext" %>
-<%@page import="Baloot.View.UserInfoModel"%>
-<%@ page import="Baloot.Context.ContextManager" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page import="java.util.List" %>
-<%@ page import="Baloot.Model.CommodityModel" %>
+<%@ page import="Baloot.Data.Entity.Commodity" %>
+<%@ page import="Baloot.Data.Entity.User" %>
 
 <%
-    UserInfoModel buyList = (UserInfoModel) request.getAttribute("buyList");
+    List<Commodity> buyList = (ArrayList<Commodity>) request.getAttribute("buyList");
+    User user = (User) request.getAttribute("user");
+    Integer totalPrice = (Integer) request.getAttribute("totalPrice");
 %>
 
 <html lang="en"><head>
@@ -24,19 +24,18 @@
 </head>
 <body>
 <ul>
-    <li id="username">Username: <%=buyList.userModel.username%></li>
-    <li id="email">Email: <%=buyList.userModel.email%></li>
-    <li id="birthDate">Birth Date: <%=buyList.userModel.birthDate%></li>
-    <li id="address"><%=buyList.userModel.address%></li>
-    <li id="credit">Credit: <%=buyList.userModel.credit%></li>
-    <li>Current Buy List Price: <%=buyList.buyListPrice%></li>
+    <li id="username">Username: <%=user.getUsername()%></li>
+    <li id="email">Email: <%=user.getEmail()%></li>
+    <li id="birthDate">Birth Date: <%=user.getBirthDate()%></li>
+    <li id="address"><%=user.getAddress()%></li>
+    <li id="credit">Credit: <%=user.getCredit()%></li>
+    <li>Current Buy List Price: <%=totalPrice%></li>
     <li>
         <a href="/credit">Add Credit</a>
     </li>
     <li>
-        <form action="/payment" method="POST">
+        <form action="/payment" method="get">
             <label>Submit & Pay</label>
-            <input id="form_payment" type="hidden" name="userId" value="<%=buyList.userModel.username%>">
             <button type="submit">Payment</button>
         </form>
     </li>
@@ -56,25 +55,22 @@
         <th></th>
         <th></th>
     </tr>
-    <% for (CommodityModel commodity : buyList.buyList) { %>
+    <% for (Commodity commodity : buyList) { %>
     <tr>
-        <td><%=commodity.id%></td>
-        <td><%=commodity.name%></td>
-        <td><%=ContextManager.getInstance().getProvider(commodity.providerId).getName()%></td>
-        <td><%=commodity.price%></td>
-        <% List<String> categoryList = new ArrayList<>();
-            for(String category : commodity.categories) {
-                categoryList.add(category);
-            }
+        <td><%=commodity.getId()%></td>
+        <td><%=commodity.getName()%></td>
+        <td><%=commodity.getProviderId()%></td>
+        <td><%=commodity.getPrice()%></td>
+        <%
+            List<String> categoryList = new ArrayList<>(commodity.getCategories());
             String categoryString = String.join(", ", categoryList);
         %>
         <td><%=categoryString%></td>
-        <td><%=commodity.rating%></td>
-        <td><%=commodity.inStock%></td>
-        <td><a href="/commodities/<%=commodity.id%>>">Link</a></td>
+        <td><%=commodity.getRating()%></td>
+        <td><%=commodity.getInStock()%></td>
+        <td><a href="/commodities/<%=commodity.getId()%>>">Link</a></td>
         <td>
-            <form action="/removeFromBuyList" method="POST">
-                <input id="form_commodity_id" type="hidden" name="commodityId" value="<%=commodity.id%>">
+            <form action="/removeFromBuyList/<%=commodity.getId()%>" method="POST">
                 <button type="submit">Remove</button>
             </form>
         </td>
