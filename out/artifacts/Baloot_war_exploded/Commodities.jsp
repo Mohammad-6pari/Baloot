@@ -1,12 +1,11 @@
-<%@ page import="Baloot.Commands.GetCommoditiesList" %>
-<%@ page import="Baloot.View.CommodityListModel" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
-<%@ page import="Baloot.Context.UserContext" %>
+<%@ page import="Baloot.Data.Entity.Commodity" %>
 
 
 <%
-    CommodityListModel commodities = (CommodityListModel) request.getAttribute("commodities");
+    List<Commodity> commodities = (ArrayList<Commodity>) request.getAttribute("commodities");
+    String username = (String)request.getAttribute("username");
 %>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,19 +21,20 @@
 </head>
 <body>
 <a href="/">Home</a>
-<p id="username">username: <%=UserContext.username%></p>
+<p id="username">username: <%=username%></p>
 <br><br>
-<form action="/commodities/search" method="POST">
+<form action="/commodities" method="get">
     <label>Search:</label>
-    <input type="text" name="search" value="">
-    <button type="submit" name="action" value="search_by_category">Search By Cagtegory</button>
-    <button type="submit" name="action" value="search_by_name">Search By Name</button>
-    <button type="submit" name="action" value="clear">Clear Search</button>
+    <label>
+        <input type="text" name="q" />
+    </label>
+    <button type="submit" name="searchBy" value="category">Search By Category</button>
+    <button type="submit" name="searchBy" value="name">Search By Name</button>
 </form>
 <br><br>
-<form action="/commodities/search" method="POST">
+<form action="/commodities" method="get">
     <label>Sort By:</label>
-    <button type="submit" name="action" value="sort_by_rate">Rate</button>
+    <button type="submit" name="sortBy" value="rate">Rate</button>
 </form>
 <br><br>
 <table>
@@ -48,23 +48,21 @@
         <th>In Stock</th>
         <th>Links</th>
     </tr>
-    <% for(int i = 0; i < commodities.commoditiesList.size(); i+=1) { %>
+    <% for(int i = 0; i < commodities.size(); i+=1) { %>
     <tr>
-        <td><%=commodities.commoditiesList.get(i).id%></td>
-        <td><%=commodities.commoditiesList.get(i).name%></td>
-        <td><%=commodities.commoditiesList.get(i).providerId%></td>
-        <td><%=commodities.commoditiesList.get(i).price%></td>
-        <% List<String> categoryList = new ArrayList<>();
-            for(String category : commodities.commoditiesList.get(i).categories) {
-                categoryList.add(category);
-            }
+        <td><%=commodities.get(i).getId()%></td>
+        <td><%=commodities.get(i).getName()%></td>
+        <td><%=commodities.get(i).getProviderId()%></td>
+        <td><%=commodities.get(i).getPrice()%></td>
+        <%
+            List<String> categoryList = new ArrayList<>(commodities.get(i).getCategories());
             String categoryString = String.join(", ", categoryList);
         %>
         <td><%= categoryString %></td>
 
-        <td><%=commodities.commoditiesList.get(i).rating%></td>
-        <td><%=commodities.commoditiesList.get(i).inStock%></td>
-        <td><a href="/commodities/<%=commodities.commoditiesList.get(i).id%>">Link</a></td>
+        <td><%=commodities.get(i).getRating()%></td>
+        <td><%=commodities.get(i).getInStock()%></td>
+        <td><a href="/commodities/<%=commodities.get(i).getId()%>">Link</a></td>
     </tr>
     <% } %>
 </table>

@@ -8,8 +8,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
@@ -243,6 +246,8 @@ public class MemoryContextManager implements IContextManager {
     @Override
     public Commodity addToBuyList(BuyListItemDTO buyListItemDTO) {
         Commodity commodity = getCommodity(buyListItemDTO.commodityId);
+        if (getBuyListItem(buyListItemDTO.username, buyListItemDTO.commodityId) != null)
+            return commodity;
         if (commodity != null && commodity.getInStock() > 0 && getUser(buyListItemDTO.username) != null) {
             commodity.setInStock(commodity.getInStock() - 1);
             BuyListItem buyListItem = new BuyListItem(buyListItemDTO.username, buyListItemDTO.commodityId);
@@ -284,13 +289,18 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
+    public List<Commodity> getCommoditiesByName(String name) {
+        return commodities.stream().filter(c -> c.getName().contains(name)).collect(Collectors.toList());
+    }
+
+    @Override
     public List<Commodity> getBuyListByUsername(String username) {
         List<Integer> items = buyListItems.stream().filter(i -> i.getUsername().equals(username)).map(i -> i.getCommodityId()).collect(Collectors.toList());
         return commodities.stream().filter(c -> items.contains(c.getId())).collect(Collectors.toList());
     }
 
     @Override
-    public CommentVote voteComment(String username, Integer commentId, Integer vote) {
+    public Comment voteComment(String username, Integer commentId, Integer vote) {
         var commentVote = getCommentVote(username, commentId);
         if (commentVote == null) {
             commentVote = new CommentVote(username, commentId, vote);
@@ -298,18 +308,48 @@ public class MemoryContextManager implements IContextManager {
         } else {
             commentVote.setVote(vote);
         }
-        return commentVote;
+        return getComment(commentId);
     }
 
     @Override
     public CommentVote getCommentVote(String username, Integer commentId) {
         return commentVotes.stream()
-                .filter(v -> v.getCommentId() == commentId && v.getUsername().equals(username))
+                .filter(v -> Objects.equals(v.getCommentId(), commentId) && v.getUsername().equals(username))
                 .findFirst().orElse(null);
     }
 
     @Override
     public Comment getComment(Integer commentId) {
         return comments.stream().filter(c -> c.getId() == commentId).findFirst().orElse(null);
+    }
+
+    @Override
+    public Comment addComment(String userEmail, Integer commodityId, String text) {
+        Integer lastId = comments.stream().map(Comment::getId).max(Integer::compare).orElse(0);
+        var comment = new Comment(
+            lastId + 1,
+            new SimpleDateFormat("yyyy-MM-dd").format(new Date()),
+            userEmail,
+            commodityId,
+            text
+        );
+        comments.add(comment);
+        return comment;
+    }
+
+    private void setCommentLikes(Comment comment) {
+        comment.setDislikes(0);
+        comment.setLikes(0);
+        commentVotes.stream().filter(v -> v.getCommentId().equals(comment.getId()))
+                .forEach(v -> {
+                    if (v.getVote().equals(1))
+                        comment.setLikes(comment.getLikes() + 1);
+                    else comment.setDislikes(comment.getDislikes() + 1);
+                });
+    }
+    @Override
+    public List<Comment> getCommodityComments(Integer commodityId) {
+        return comments.stream().filter(c -> c.getCommodityId().equals(commodityId))
+                .peek(this::setCommentLikes).collect(Collectors.toList());
     }
 }

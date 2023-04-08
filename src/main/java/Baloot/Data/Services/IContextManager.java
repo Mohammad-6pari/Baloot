@@ -2,6 +2,7 @@ package Baloot.Data.Services;
 
 import Baloot.Business.DTOs.*;
 import Baloot.Data.Entity.*;
+import javassist.compiler.ast.Pair;
 
 import java.util.List;
 
@@ -26,8 +27,11 @@ public interface IContextManager {
     BuyListItem removeBuyListItem(BuyListItemDTO buyListItemDTO);
     List<Commodity> getCommoditiesByCategory(String category);
     List<Commodity> getCommoditiesByPrice(Integer startPrice, Integer endPrice);
+    List<Commodity> getCommoditiesByName(String name);
     List<Commodity> getBuyListByUsername(String username);
-    CommentVote voteComment(String username, Integer commentId, Integer vote);
+    Comment voteComment(String username, Integer commentId, Integer vote);
     CommentVote getCommentVote(String username, Integer commentId);
     Comment getComment(Integer commentId);
+    Comment addComment(String userEmail, Integer commodityId, String text);
+    List<Comment> getCommodityComments(Integer commodityId);
 }

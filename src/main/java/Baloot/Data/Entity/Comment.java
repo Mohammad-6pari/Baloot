@@ -4,6 +4,24 @@ import org.json.JSONObject;
 
 public class Comment implements IEntity {
     private Integer id;
+    private Integer likes;
+    private Integer dislikes;
+
+    public Integer getLikes() {
+        return likes;
+    }
+
+    public void setLikes(Integer likes) {
+        this.likes = likes;
+    }
+
+    public Integer getDislikes() {
+        return dislikes;
+    }
+
+    public void setDislikes(Integer dislikes) {
+        this.dislikes = dislikes;
+    }
 
     public Integer getId() {
         return id;
@@ -29,6 +47,8 @@ public class Comment implements IEntity {
         this.userEmail = userEmail;
         this.commodityId = commodityId;
         this.text = text;
+        this.likes = 0;
+        this.dislikes = 0;
     }
 
     private String userEmail;
