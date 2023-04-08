@@ -8,6 +8,7 @@
 </head>
 
 <body>
+<a href="/">Home</a>
 <form method="post" action="/credit">
   <label>Credits:</label>
   <input name="credit" type="text" />

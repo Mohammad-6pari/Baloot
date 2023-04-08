@@ -23,6 +23,7 @@
     </style>
 </head>
 <body>
+<a href="/">Home</a>
 <ul>
     <li id="username">Username: <%=user.getUsername()%></li>
     <li id="email">Email: <%=user.getEmail()%></li>

@@ -8,7 +8,7 @@
 
 <%
   Commodity commodity = (Commodity) request.getAttribute("commodity");
-  List<Commodity> suggestions = (ArrayList<Commodity>)request.getAttribute("suggestions");
+  List<Commodity> suggestions = (List<Commodity>)request.getAttribute("suggestions");
   List<Comment> comments = (ArrayList<Comment>) request.getAttribute("comments");
   String username = (String) request.getAttribute("username");
 %>
@@ -29,6 +29,7 @@
   </style>
 </head>
 <body>
+<a href="/">Home</a>
 <span>username: <%=username%></span>
 <br>
 <ul>

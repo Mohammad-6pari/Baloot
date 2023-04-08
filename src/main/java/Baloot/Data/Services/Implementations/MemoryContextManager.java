@@ -300,14 +300,22 @@ public class MemoryContextManager implements IContextManager {
         return buyListItem;
     }
 
+    private boolean hasSameCategories(Commodity commodity,  List<String> categories) {
+        for (String category : categories)
+            if (commodity.getCategories().contains(category))
+                return true;
+        return false;
+    }
+
+    private float getSuggestionScore(Commodity commodity, List<String> categories) {
+        return commodity.getRating() + (hasSameCategories(commodity, categories) ? 11 : 0);
+    }
+
     @Override
-    public List<Commodity> getCommoditiesByCategory(List<String> categories) {
-        return commodities.stream().filter(c -> {
-            for (String category : categories)
-                if (c.getCategories().contains(category))
-                    return true;
-            return false;
-        }).collect(Collectors.toList());
+    public List<Commodity> getCommoditySuggestions(List<String> categories) {
+        return commodities.stream().sorted(
+                (c1, c2) -> Float.compare(getSuggestionScore(c1, categories), getSuggestionScore(c2, categories))
+        ).collect(Collectors.toList()).subList(Math.max(commodities.size() - 3, 0), commodities.size());
     }
 
     @Override

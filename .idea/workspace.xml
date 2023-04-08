@@ -11,15 +11,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/BuyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/BuyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Commodity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Commodity.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/IContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/IContextManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/BuyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/BuyList.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Commodity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Commodity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/BuyList.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/BuyList.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Commodity.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Commodity.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/Credit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/web/Credit.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +191,7 @@
       <workItem from="1680868942770" duration="2645000" />
       <workItem from="1680871680333" duration="464000" />
       <workItem from="1680880656818" duration="7435000" />
-      <workItem from="1680931495747" duration="16977000" />
+      <workItem from="1680931495747" duration="18135000" />
     </task>
     <servers />
   </component>
