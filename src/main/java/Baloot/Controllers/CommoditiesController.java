@@ -1,47 +1,51 @@
 package Baloot.Controllers;
 
 import Baloot.Data.Entity.Commodity;
+import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
 
-import java.io.IOException;
+import Baloot.Data.Services.IContextManager;
+import lombok.RequiredArgsConstructor;
+import org.json.JSONObject;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
-@WebServlet("/commodities")
-public class CommoditiesController extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+@RestController
+@RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8080")
+public class CommoditiesController {
+    @GetMapping("/commodities")
+    public ResponseEntity<?> commodities(@RequestParam(required = false) Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
-
         var user = contextManager.getLoggedinUser();
-        if (user == null) resp.sendRedirect("/login");
-        else {
-            req.setAttribute("username", user.getUsername());
-            var searchBy = req.getParameter("searchBy");
-            var query = req.getParameter("q");
-            var sortBy = req.getParameter("sortBy");
+//        if (user == null) {
+//            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+//        } else {
+            var searchBy = req.get("searchBy");
+            var query = req.get("q");
+            var sortBy = req.get("sortBy");
             List<Commodity> commodities;
             if (query != null) {
                 if (searchBy != null && searchBy.equals("name")) {
                     commodities = contextManager.getCommoditiesByName(query);
-                }
-                else if (searchBy != null && searchBy.equals("category")) {
+                } else if (searchBy != null && searchBy.equals("category")) {
                     commodities = contextManager.getCommoditiesByCategory(query);
-                }
-                else commodities = contextManager.getCommoditiesList();
+                } else commodities = contextManager.getCommoditiesList();
             } else commodities = contextManager.getCommoditiesList();
             if (sortBy != null && sortBy.equals("rate")) {
                 commodities = commodities.stream()
                         .sorted((c1, c2) -> Float.compare(c1.getRating(), c2.getRating())).collect(Collectors.toList());
             }
-            req.setAttribute("commodities", commodities);
-            var dispatcher = req.getRequestDispatcher("Commodities.jsp");
-            dispatcher.forward(req, resp);
-        }
+            JSONObject resp = new JSONObject();
+//            resp.put("username",user.getUsername());
+            resp.put("commodities", commodities);
+            return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
+//        }
     }
 }
