@@ -9,7 +9,84 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="" />
+    <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="pom file modifies">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baloot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Baloot.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/AddToBuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/AddToBuyListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/BuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/BuyListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommoditiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommoditiesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CreditController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/DiscountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/RateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/RateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/RemoveBuyListItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/RemoveBuyListItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/VoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/VoteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/400.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddCommodityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddCommodityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddProviderCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddProviderCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddToBuyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddToBuyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCredit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetBuyListByUsername.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetBuyListByUsername.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommodityById.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommodityById.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetProviderById.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetProviderById.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetUserByUsername.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetUserByUsername.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/InvalidCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/InvalidCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RateCommodityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RateCommodityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RemoveBuyListItemCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RemoveBuyListItemCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/VoteCommentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/VoteCommentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/BuyListItemDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/BuyListItemDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityResultDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityResultDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/ProviderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/ProviderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/RateCommodityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/RateCommodityDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Controllers/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/BuyListItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/BuyListItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommentVote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommentVote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Commodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Commodity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommodityRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommodityRate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/IEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/IEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Provider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/IContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/IContextManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Commands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/IView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/IView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Implementations/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Implementations/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/ResponseStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BuyList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commodities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commodity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Commodity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Credit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Credit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/WEB-INF/web.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +109,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -40,7 +120,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2O66yrp6K7ySF8wF0F1lLDYby4y" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -60,7 +140,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
@@ -78,7 +158,20 @@
       <command value="mvn clean" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Baloot.Main" />
+      <module name="Baloot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baloot.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat 10.1.7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.1.7" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -167,6 +260,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -181,6 +279,14 @@
       <workItem from="1680880656818" duration="7435000" />
       <workItem from="1680931495747" duration="18222000" />
     </task>
+    <task id="LOCAL-00001" summary="pom file modifies">
+      <created>1683400262211</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683400262211</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,5 +302,24 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="pom file modifies" />
+    <option name="LAST_COMMIT_MESSAGE" value="pom file modifies" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NoClassDefFoundError" package="java.lang" />
+          <option name="timeStamp" value="2" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Baloot$AddRateTests.ic" NAME="AddRateTests Coverage Results" MODIFIED="1677754956715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Baloot.*</FILTER>
+    </SUITE>
   </component>
 </project>

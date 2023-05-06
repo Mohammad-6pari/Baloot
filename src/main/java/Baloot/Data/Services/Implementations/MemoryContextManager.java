@@ -13,7 +13,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
-    private final String BASE_URL = "http://5.253.25.110:5000/api";
+    private final String BASE_URL = "http://5.253.25.110:5000/api/v2";
     private final List<User> users;
     private User loggedinUser;
     private final List<Provider> providers;
@@ -27,6 +27,7 @@ public class MemoryContextManager implements IContextManager {
     private List<Commodity> getCommoditiesFromApi() {
         try {
             Document doc = Jsoup.connect(BASE_URL + "/commodities").ignoreContentType(true).get();
+
             JSONArray jsonArray = new JSONArray(doc.body().text());
             List<Commodity> apiCommodities = new ArrayList<>();
 
