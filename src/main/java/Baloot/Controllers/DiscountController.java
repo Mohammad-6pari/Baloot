@@ -1,25 +1,34 @@
-//package Baloot.Controllers;
-//
-//import Baloot.Data.Services.ContextLoader;
-//import jakarta.servlet.ServletException;
-//import jakarta.servlet.annotation.WebServlet;
-//import jakarta.servlet.http.HttpServlet;
-//import jakarta.servlet.http.HttpServletRequest;
-//import jakarta.servlet.http.HttpServletResponse;
-//
-//import java.io.IOException;
-//
-//@WebServlet("/addDiscount")
-//public class DiscountController extends HttpServlet {
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        var contextManager = ContextLoader.getContextManager();
-//
-//        var user = contextManager.getLoggedinUser();
-//        if (user == null) resp.sendRedirect("/login");
-//        else {
-//            contextManager.applyDiscount(user.getUsername(), req.getParameter("code"));
-//            resp.sendRedirect("/buyList");
-//        }
-//    }
-//}
+package Baloot.Controllers;
+
+import Baloot.Data.Entity.Commodity;
+import Baloot.Data.Entity.User;
+import Baloot.Data.Services.ContextLoader;
+
+import Baloot.Data.Services.IContextManager;
+import lombok.RequiredArgsConstructor;
+import org.json.JSONObject;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+@RestController
+@RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8080")
+public class DiscountController {
+    @PostMapping("/addDiscount")
+    public ResponseEntity<?> postDiscountController(@RequestParam(required = false) Map<String, String> req) {
+        var contextManager = ContextLoader.getContextManager();
+        var user = contextManager.getLoggedinUser();
+        if (user == null) {
+            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+        }        else {
+            contextManager.applyDiscount(user.getUsername(), req.get("code"));
+            return new ResponseEntity<String>("discount added", HttpStatus.OK);
+        }
+    }
+}
