@@ -1,29 +1,32 @@
-//package Baloot.Controllers;
-//
-//import Baloot.Business.DTOs.BuyListItemDTO;
-//import Baloot.Data.Services.ContextLoader;
-//import jakarta.servlet.ServletException;
-//import jakarta.servlet.annotation.WebServlet;
-//import jakarta.servlet.http.HttpServlet;
-//import jakarta.servlet.http.HttpServletRequest;
-//import jakarta.servlet.http.HttpServletResponse;
-//
-//import java.io.IOException;
-//
-//@WebServlet("/addToBuyList/*")
-//public class AddToBuyListController extends HttpServlet {
-//    @Override
-//    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        var contextManager = ContextLoader.getContextManager();
-//
-//        var user = contextManager.getLoggedinUser();
-//        if (user == null) resp.sendRedirect("/login");
-//        else {
-//            var buyListItem = new BuyListItemDTO();
-//            buyListItem.commodityId = Integer.valueOf(req.getPathInfo().split("/")[1]);
-//            buyListItem.username = user.getUsername();
-//            contextManager.addToBuyList(buyListItem);
-//            resp.sendRedirect("/buyList");
+package Baloot.Controllers;
+
+import Baloot.Business.DTOs.BuyListItemDTO;
+import Baloot.Data.Services.ContextLoader;
+
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
+
+
+@RestController
+@RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:8080")
+public class AddToBuyListController {
+    @PostMapping("/addToBuyList/{commodityId}")
+    public ResponseEntity<?> addToBuyList(@PathVariable String commodityId) {
+        var contextManager = ContextLoader.getContextManager();
+        var user = contextManager.getLoggedinUser();
+//        if (user == null){
+//            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
 //        }
-//    }
-//}
+//        else {
+        var buyListItem = new BuyListItemDTO();
+        buyListItem.commodityId = Integer.valueOf(commodityId);
+        buyListItem.username = user.getUsername();
+        contextManager.addToBuyList(buyListItem);
+        return new ResponseEntity<String>("added", HttpStatus.CREATED);
+//        }
+    }
+}
