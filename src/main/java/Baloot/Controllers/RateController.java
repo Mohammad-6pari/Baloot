@@ -24,7 +24,7 @@ import java.util.stream.Collectors;
 public class RateController {
     @PostMapping("/rateCommodity/{id}")
     public ResponseEntity<?> postRateController(@PathVariable String id,
-                                                @RequestParam(required = false) Map<String, String> req) {
+                                                @RequestParam(required = true) Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
 
         var user = contextManager.getLoggedinUser();

@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "http://localhost:8080")
 public class DiscountController {
     @PostMapping("/addDiscount")
-    public ResponseEntity<?> postDiscountController(@RequestParam(required = false) Map<String, String> req) {
+    public ResponseEntity<?> postDiscountController(@RequestParam(required = true) Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
         if (user == null) {

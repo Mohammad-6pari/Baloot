@@ -6,6 +6,7 @@ import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
 import Baloot.Data.Services.IContextManager;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
@@ -21,17 +22,14 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class RemoveBuyListItemController {
-    @PostMapping("/removeFromBuyList/{id}")
-    public ResponseEntity<?> postRemoveBuyListItemController(@PathVariable String id) {
+    @PostMapping("/removeFromBuyList")
+    public ResponseEntity<?> postRemoveBuyListItemController(@Valid @RequestBody BuyListItemDTO buyListItem) {
         var contextManager = ContextLoader.getContextManager();
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
             return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
         }        else {
-            var buyListItem = new BuyListItemDTO();
-            buyListItem.username = user.getUsername();
-            buyListItem.commodityId = Integer.valueOf(id);
             contextManager.removeBuyListItem(buyListItem);
             return new ResponseEntity<String>("removed", HttpStatus.OK);
         }

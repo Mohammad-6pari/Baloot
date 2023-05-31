@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 public class VoteController {
     @PostMapping("/voteComment/{id}")
     public ResponseEntity<?> postVoteController(@PathVariable String id,
-                                                @RequestParam(required = false) Map<String, String> req) {
+                                                @RequestParam(required = true) Map<String, String> req) {
 
         var contextManager = ContextLoader.getContextManager();
 

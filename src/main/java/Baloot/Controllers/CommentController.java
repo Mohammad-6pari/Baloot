@@ -1,7 +1,6 @@
 package Baloot.Controllers;
 
 import Baloot.Data.Services.ContextLoader;
-
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
@@ -17,7 +16,7 @@ import java.util.Map;
 public class CommentController {
     @PostMapping("/addComment/{id}")
     public ResponseEntity<?> commentController(@PathVariable String id,
-                                               @RequestParam(required = false) Map<String, String> req) {
+                                               @RequestParam(required = true) Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
         if (user == null) {

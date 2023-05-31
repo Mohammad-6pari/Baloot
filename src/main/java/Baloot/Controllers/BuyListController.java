@@ -17,26 +17,25 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
-@RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class BuyListController {
 
     @GetMapping("/buyList")
-    public ResponseEntity<?> buyListController(@RequestParam(required = false) Map<String, String> req) {
+    public ResponseEntity<?> buyListController() {
 
         var contextManager = ContextLoader.getContextManager();
 
         var user = contextManager.getLoggedinUser();
-//        if (user == null) {
-//            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
-//        }
-//        else {
+       if (user == null) {
+           return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+       }
+       else {
         JSONObject resp = new JSONObject();
-//            resp.put("user",user);
+        resp.put("user",user);
         resp.put("buyList", contextManager.getBuyListByUsername(user.getUsername()));
         resp.put("totalPrice", contextManager.getBuyListTotalPrice(user.getUsername()));
 
         return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
-//        }
+       }
     }
 }

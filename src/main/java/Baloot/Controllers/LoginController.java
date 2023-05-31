@@ -26,7 +26,7 @@ public class LoginController {
         }
     }
     @PostMapping("/login")
-    public ResponseEntity<?> postLogin(@RequestParam(required = false) Map<String, String> req) {
+    public ResponseEntity<?> loginController(@RequestParam(required = true) Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
 
         var username = req.get("username");

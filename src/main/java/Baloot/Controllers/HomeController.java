@@ -24,7 +24,7 @@ public class HomeController {
         var contextManager = ContextLoader.getContextManager();
 
         if (!contextManager.isUserAuthenticated()) {
-            return new ResponseEntity<String>("not suthenticated",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>("not authenticated",HttpStatus.UNAUTHORIZED);
         } else {
             JSONObject resp = new JSONObject();
             resp.put("user", contextManager.getLoggedinUser());

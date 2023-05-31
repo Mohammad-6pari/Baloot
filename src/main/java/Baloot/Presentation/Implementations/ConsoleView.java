@@ -30,15 +30,16 @@ public class ConsoleView implements IView {
             json = new JSONObject(commands.get(1));
         }
         switch (command) {
-            case Commands.ADD_USER:
-                final UserDTO userData = new UserDTO();
-                userData.username = json.getString("username");
-                userData.password = json.getString("password");
-                userData.email = json.getString("password");
-                userData.birthDate = json.getString("birthDate");
-                userData.address = json.getString("address");
-                userData.credit = json.getInt("credit");
-                return new AddUserCommand(userData);
+            // didn't need anymore
+            // case Commands.ADD_USER:
+            //     final UserDTO userData = new UserDTO();
+            //     userData.username = json.getString("username");
+            //     userData.password = json.getString("password");
+            //     userData.email = json.getString("password");
+            //     userData.birthDate = json.getString("birthDate");
+            //     userData.address = json.getString("address");
+            //     userData.credit = json.getInt("credit");
+            //     return new AddUserCommand(userData);
             case Commands.ADD_PROVIDER:
                 final ProviderDTO providerData = new ProviderDTO();
                 providerData.id=json.getInt("id");
