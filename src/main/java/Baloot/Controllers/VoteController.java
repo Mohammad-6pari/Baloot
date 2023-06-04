@@ -28,11 +28,11 @@ public class VoteController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         }        else {
             var commentId = Integer.valueOf(id);;
             var comment = contextManager.voteComment(user.getUsername(), commentId, Integer.parseInt(req.get("vote")));
-            return new ResponseEntity<String>("vote added", HttpStatus.OK);
+            return new ResponseEntity<String>(HttpStatus.OK);
         }
     }
 }

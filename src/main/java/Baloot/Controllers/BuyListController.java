@@ -27,11 +27,11 @@ public class BuyListController {
 
         var user = contextManager.getLoggedinUser();
        if (user == null) {
-           return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+           return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
        }
        else {
         JSONObject resp = new JSONObject();
-        resp.put("user",user);
+        resp.put("user",user.getUsername());
         resp.put("buyList", contextManager.getBuyListByUsername(user.getUsername()));
         resp.put("totalPrice", contextManager.getBuyListTotalPrice(user.getUsername()));
 

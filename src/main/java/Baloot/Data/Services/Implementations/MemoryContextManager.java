@@ -13,7 +13,9 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class MemoryContextManager implements IContextManager {
-    private final String BASE_URL = "http://5.253.25.110:5000/api/v2";
+    private final String BASE_URL = "http://5.253.25.110:5000/api";
+    private final String BASE_URL_V2 = "http://5.253.25.110:5000/api/v2";
+
     private final List<User> users;
     private User loggedinUser;
     private final List<Provider> providers;
@@ -26,7 +28,7 @@ public class MemoryContextManager implements IContextManager {
 
     private List<Commodity> getCommoditiesFromApi() {
         try {
-            Document doc = Jsoup.connect(BASE_URL + "/commodities").ignoreContentType(true).get();
+            Document doc = Jsoup.connect(BASE_URL_V2 + "/commodities").ignoreContentType(true).get();
 
             JSONArray jsonArray = new JSONArray(doc.body().text());
             List<Commodity> apiCommodities = new ArrayList<>();
@@ -57,7 +59,7 @@ public class MemoryContextManager implements IContextManager {
 
     private List<Provider> getProvidersFromApi() {
         try {
-            Document doc = Jsoup.connect(BASE_URL + "/providers").ignoreContentType(true).get();
+            Document doc = Jsoup.connect(BASE_URL_V2 + "/providers").ignoreContentType(true).get();
             JSONArray jsonArray = new JSONArray(doc.body().text());
             List<Provider> apiProviders = new ArrayList<>();
 
@@ -168,14 +170,14 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
-    public User loginUser(String username, String password) {
-        if (loggedinUser != null) return null;
+    public Object loginUser(String username, String password) {
+        if (loggedinUser != null) return 403;
         User user = getUser(username);
         if (user != null && user.getPassword().equals(password)) {
             loggedinUser = user;
             return user;
         }
-        return null;
+        return 401;
     }
 
     @Override
@@ -184,8 +186,13 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
-    public void logoutUser() {
-        loggedinUser = null;
+    public int logoutUser() {
+        if (loggedinUser==null)
+            return 401;
+        else{
+            loggedinUser = null;
+            return 200;
+        }
     }
 
     @Override
@@ -270,16 +277,17 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
-    public Commodity addToBuyList(BuyListItemDTO buyListItemDTO) {
+    public Object addToBuyList(BuyListItemDTO buyListItemDTO) {
         Commodity commodity = getCommodity(buyListItemDTO.commodityId);
         if (getBuyListItem(buyListItemDTO.username, buyListItemDTO.commodityId) != null)
-            return commodity;
+            return -1;
         if (commodity != null && commodity.getInStock() > 0 && getUser(buyListItemDTO.username) != null) {
             commodity.setInStock(commodity.getInStock() - 1);
             BuyListItem buyListItem = new BuyListItem(buyListItemDTO.username, buyListItemDTO.commodityId);
             buyListItems.add(buyListItem);
+            return commodity;
         }
-        return commodity;
+        return 0;
     }
 
     @Override
@@ -298,8 +306,9 @@ public class MemoryContextManager implements IContextManager {
                     .collect(Collectors.toList());
             buyListItems.clear();
             buyListItems.addAll(newList);
+            return buyListItem;
         }
-        return buyListItem;
+        return null;
     }
 
     private boolean hasSameCategories(Commodity commodity,  List<String> categories) {
@@ -398,11 +407,11 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
-    public void submitBuyList(String username) {
+    public int submitBuyList(String username) {
         var user = getUser(username);
         var totalPrice = getBuyListTotalPrice(username);
         if (user.getCredit() < totalPrice)
-            return;
+            return 0;
 
         user.setCredit(user.getCredit() - totalPrice);
         user.useCurrentDiscount();
@@ -410,6 +419,7 @@ public class MemoryContextManager implements IContextManager {
                 .filter(i -> !i.getUsername().equals(username)).collect(Collectors.toList());
         buyListItems.clear();
         buyListItems.addAll(newBuyListItems);
+        return 1;
     }
 
     @Override
@@ -418,13 +428,14 @@ public class MemoryContextManager implements IContextManager {
     }
 
     @Override
-    public void applyDiscount(String username, String code) {
+    public int applyDiscount(String username, String code) {
         var user = getUser(username);
         var discount = getDiscount(code);
-        if (discount == null) return;
+        if (discount == null) return -1;
         if (user.getUsedDiscounts().stream().anyMatch(d -> d.getCode().equals(code)))
-            return;
+            return 0;
         user.setCurrentDiscount(discount);
+        return 1;
     }
 
     @Override

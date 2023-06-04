@@ -17,12 +17,10 @@ public class UserDTO {
     @NonNull
     public String password;
 
-    @NonNull
+
     @Email
     public String email;
-    @NonNull
     public String birthDate;
-    @NonNull
     public String address;
     public Integer credit;
 }

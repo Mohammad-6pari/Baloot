@@ -28,10 +28,15 @@ public class RemoveBuyListItemController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
-        }        else {
-            contextManager.removeBuyListItem(buyListItem);
-            return new ResponseEntity<String>("removed", HttpStatus.OK);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+        } else {
+            var removeResp=contextManager.removeBuyListItem(buyListItem);
+            JSONObject resp = new JSONObject();
+            if (removeResp==null){
+                resp.put("text","not removed");
+            }else resp.put("text","removed");
+
+            return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
         }
     }
 }

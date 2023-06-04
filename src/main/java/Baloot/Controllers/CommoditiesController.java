@@ -21,11 +21,11 @@ import java.util.stream.Collectors;
 @CrossOrigin(origins = "http://localhost:8080")
 public class CommoditiesController {
     @GetMapping("/commodities")
-    public ResponseEntity<?> commodities(@RequestParam(required = true) Map<String, String> req) {
+    public ResponseEntity<?> commodities(@RequestParam Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         } else {
             var searchBy = req.get("searchBy");
             var query = req.get("q");
@@ -43,7 +43,6 @@ public class CommoditiesController {
                         .sorted((c1, c2) -> Float.compare(c1.getRating(), c2.getRating())).collect(Collectors.toList());
             }
             JSONObject resp = new JSONObject();
-            resp.put("username",user.getUsername());
             resp.put("commodities", commodities);
             return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
         }

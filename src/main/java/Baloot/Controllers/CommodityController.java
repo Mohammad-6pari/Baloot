@@ -18,17 +18,20 @@ public class CommodityController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         }
         else {
             JSONObject resp = new JSONObject();
-            resp.put("username", user.getUsername());
             var commodity = contextManager.getCommodity(Integer.valueOf(id));
-            if (commodity == null){
-                resp.put("commodity", "");
-            }
+            if (commodity == null)
+                return new ResponseEntity<String>(HttpStatus.NO_CONTENT);
             else {
-                resp.put("commodity", commodity);
+                resp.put("commodityId", commodity.getId().toString());
+                resp.put("commodityName", commodity.getName().toString());
+                resp.put("commodityPrice", commodity.getPrice().toString());
+                resp.put("commodityCategories", commodity.getCategories().toString());
+                resp.put("commodityRating", commodity.getRating());
+                resp.put("commodityInStock", commodity.getInStock().toString());
                 resp.put("suggestions", contextManager.getCommoditySuggestions(commodity.getCategories()));
                 resp.put("comments", contextManager.getCommodityComments(commodity.getId()));
             }

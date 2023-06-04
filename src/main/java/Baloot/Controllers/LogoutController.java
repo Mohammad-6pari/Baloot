@@ -17,10 +17,14 @@ import org.springframework.web.bind.annotation.*;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class LogoutController {
-    @GetMapping("/logout")
+    @PostMapping("/logout")
     public ResponseEntity<?> getLogoutController() {
         var contextManager = ContextLoader.getContextManager();
-        contextManager.logoutUser();
-        return new ResponseEntity<String>("log out successfully", HttpStatus.OK);
+        int res=contextManager.logoutUser();
+        if(res==200)
+            return new ResponseEntity<String>(HttpStatus.OK);
+        else
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+
     }
 }

@@ -22,21 +22,16 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class RateController {
-    @PostMapping("/rateCommodity/{id}")
-    public ResponseEntity<?> postRateController(@PathVariable String id,
-                                                @RequestParam(required = true) Map<String, String> req) {
+    @PostMapping("/rateCommodity")
+    public ResponseEntity<?> postRateController(@RequestBody RateCommodityDTO rateCommodityDTO) {
         var contextManager = ContextLoader.getContextManager();
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         }        else {
-            var rate = new RateCommodityDTO();
-            rate.username = user.getUsername();
-            rate.commodityId = Integer.valueOf(id);
-            rate.score = Integer.parseInt(req.get("rate"));
-            contextManager.rateCommodity(rate);
-            return new ResponseEntity<String>("rate submitted", HttpStatus.OK);
+            contextManager.rateCommodity(rateCommodityDTO);
+            return new ResponseEntity<String>(HttpStatus.OK);
         }
     }
 }

@@ -14,17 +14,21 @@ import jakarta.validation.Valid;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class AddToBuyListController {
-    @PostMapping("/addToBuyList/{commodityId}")
-    public ResponseEntity<?> addToBuyList(@PathVariable String commodityId,
-                                          @Valid @RequestBody BuyListItemDTO buyListItem) {
+    @PostMapping("/addToBuyList")
+    public ResponseEntity<?> addToBuyList(@Valid @RequestBody BuyListItemDTO buyListItem) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
-        if (user == null){
-            return new ResponseEntity<String>("Not logged in",HttpStatus.UNAUTHORIZED);
+        if (user == null) {
+            return new ResponseEntity<String>("Not logged in", HttpStatus.UNAUTHORIZED);
+        } else {
+            var addResp = contextManager.addToBuyList(buyListItem);
+            if (addResp.equals(-1))
+                return new ResponseEntity<String>("item already exists on buylist", HttpStatus.OK);
+            else if (addResp.equals(0))
+                return new ResponseEntity<String>("item not available", HttpStatus.OK);
+            else
+                return new ResponseEntity<String>("item added ", HttpStatus.OK);
+
         }
-        else {
-        contextManager.addToBuyList(buyListItem);
-        return new ResponseEntity<String>("item added to buylist", HttpStatus.CREATED);
-        }
-    }
+}
 }

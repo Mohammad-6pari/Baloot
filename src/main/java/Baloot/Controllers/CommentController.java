@@ -1,5 +1,6 @@
 package Baloot.Controllers;
 
+import Baloot.Business.DTOs.CommentDTO;
 import Baloot.Data.Services.ContextLoader;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
@@ -14,19 +15,15 @@ import java.util.Map;
 @RequiredArgsConstructor
 @CrossOrigin(origins = "http://localhost:8080")
 public class CommentController {
-    @PostMapping("/addComment/{id}")
-    public ResponseEntity<?> commentController(@PathVariable String id,
-                                               @RequestParam(required = true) Map<String, String> req) {
+    @PostMapping("/addComment")
+    public ResponseEntity<?> commentController(@RequestBody CommentDTO commentDto) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         }else {
-            JSONObject resp = new JSONObject();
-            resp.put("username",user.getUsername());
-            Integer commodityId = Integer.valueOf(id);
-            contextManager.addComment(user.getEmail(), commodityId, req.get("comment"));
-            return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
+            var comment = contextManager.addComment(user.getEmail(), commentDto.commodityId,commentDto.text);
+            return new ResponseEntity<String>(HttpStatus.OK);
         }
     }
 }

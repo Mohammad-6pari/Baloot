@@ -5,6 +5,7 @@ import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
 import lombok.RequiredArgsConstructor;
+import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -19,9 +20,12 @@ public class CreditController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         }        else {
-            return new ResponseEntity<String>("what the hell should be shown?",HttpStatus.UNAUTHORIZED);
+            JSONObject resp = new JSONObject();
+            resp.put("username",user.getUsername());
+            resp.put("credit",user.getCredit());
+            return new ResponseEntity<String>(resp.toString(),HttpStatus.UNAUTHORIZED);
 
         }
     }
@@ -32,10 +36,13 @@ public class CreditController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
-        }else {
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+        } else {
             user.setCredit(user.getCredit() + Integer.parseInt(credit));
-            return new ResponseEntity<String>("what the hell should be shown?",HttpStatus.UNAUTHORIZED);
+            JSONObject resp = new JSONObject();
+            resp.put("username",user.getUsername());
+            resp.put("credit",user.getCredit());
+            return new ResponseEntity<String>(resp.toString(),HttpStatus.UNAUTHORIZED);
         }
 }
 }

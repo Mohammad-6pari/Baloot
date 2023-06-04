@@ -12,11 +12,7 @@ import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.server.ResponseStatusException;
 
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
 
 @RestController
 @RequiredArgsConstructor
@@ -28,10 +24,16 @@ public class PaymentController {
 
         var user = contextManager.getLoggedinUser();
         if (user == null) {
-            return new ResponseEntity<String>("not logged in",HttpStatus.UNAUTHORIZED);
-        }        else {
-            contextManager.submitBuyList(user.getUsername());
-            return new ResponseEntity<String>("payment sucessfull", HttpStatus.OK);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+        } else {
+            int submitBuyList=contextManager.submitBuyList(user.getUsername());
+            JSONObject resp = new JSONObject();
+            if (submitBuyList==0)
+                resp.put("text","not enough credit");
+            else
+                resp.put("text","successfully added");
+
+            return new ResponseEntity<String>(resp.toString(),HttpStatus.OK);
         }
     }
 }

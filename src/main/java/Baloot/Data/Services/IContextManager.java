@@ -8,9 +8,9 @@ import java.util.List;
 public interface IContextManager {
     User addNewUser(UserDTO userDTO);
     User getUser(String username);
-    User loginUser(String username, String password);
+    Object loginUser(String username, String password);
     boolean isUserAuthenticated();
-    void logoutUser();
+    int logoutUser();
     User getLoggedinUser();
     User AddUserCredit(String username, Integer amount);
     User updateUser(UserDTO userDTO);
@@ -22,7 +22,7 @@ public interface IContextManager {
 
     List<Commodity> getCommoditiesList();
     Commodity rateCommodity(RateCommodityDTO rateCommodityDTO);
-    Commodity addToBuyList(BuyListItemDTO buyListItemDTO);
+    Object addToBuyList(BuyListItemDTO buyListItemDTO);
     BuyListItem getBuyListItem(String username, Integer commodityId);
     BuyListItem removeBuyListItem(BuyListItemDTO buyListItemDTO);
     List<Commodity> getCommoditySuggestions(List<String> categories);
@@ -35,8 +35,8 @@ public interface IContextManager {
     Comment getComment(Integer commentId);
     Comment addComment(String userEmail, Integer commodityId, String text);
     List<Comment> getCommodityComments(Integer commodityId);
-    void submitBuyList(String username);
+    int submitBuyList(String username);
     Discount getDiscount(String code);
-    void applyDiscount(String username, String code);
+    int applyDiscount(String username, String code);
     Integer getBuyListTotalPrice(String username);
 }

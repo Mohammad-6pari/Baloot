@@ -1,6 +1,7 @@
 package Baloot.Controllers;
 
 import Baloot.Data.Entity.Commodity;
+import Baloot.Data.Entity.Discount;
 import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
@@ -24,10 +25,17 @@ public class HomeController {
         var contextManager = ContextLoader.getContextManager();
 
         if (!contextManager.isUserAuthenticated()) {
-            return new ResponseEntity<String>("not authenticated",HttpStatus.UNAUTHORIZED);
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
         } else {
             JSONObject resp = new JSONObject();
-            resp.put("user", contextManager.getLoggedinUser());
+            resp.put("username", contextManager.getLoggedinUser().getUsername());
+            resp.put("address", contextManager.getLoggedinUser().getAddress());
+            resp.put("email", contextManager.getLoggedinUser().getEmail());
+            resp.put("birthDate", contextManager.getLoggedinUser().getBirthDate());
+            Discount currDiscount= contextManager.getLoggedinUser().getCurrentDiscount();
+            if (currDiscount!=null)
+                resp.put("currentDiscount", currDiscount.getCode());
+            resp.put("usedDiscounts", contextManager.getLoggedinUser().getUsedDiscounts());
             return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
         }
     }

@@ -1,10 +1,12 @@
 package Baloot.Controllers;
 
+import Baloot.Business.DTOs.UserDTO;
 import Baloot.Data.Entity.Commodity;
 import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
 import lombok.RequiredArgsConstructor;
+import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -18,24 +20,21 @@ public class LoginController {
     @GetMapping("/login")
     public ResponseEntity<?> getLogin() {
         var contextManager = ContextLoader.getContextManager();
-
         if (contextManager.isUserAuthenticated())
-            return new ResponseEntity<String>("not authenticated",HttpStatus.UNAUTHORIZED);
-        else {
-            return new ResponseEntity<String>("what the hell should be shown?",HttpStatus.UNAUTHORIZED);
-        }
+            return new ResponseEntity<String>(HttpStatus.OK);
+        else
+            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
     }
     @PostMapping("/login")
-    public ResponseEntity<?> loginController(@RequestParam(required = true) Map<String, String> req) {
+    public ResponseEntity<?> loginController(@RequestBody UserDTO userDto) {
         var contextManager = ContextLoader.getContextManager();
-
-        var username = req.get("username");
-        var password = req.get("password");
-        var res = contextManager.loginUser(username, password);
-        if (res == null) {
-            return new ResponseEntity<String>("login failed",HttpStatus.UNAUTHORIZED);
-        }else{
-            return new ResponseEntity<String>("login successful", HttpStatus.OK);
+        var res = contextManager.loginUser(userDto.username, userDto.password);
+        if (res.equals(403))
+            return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
+        else if (res.equals(401))
+            return new ResponseEntity<String>("username or password is wrong",HttpStatus.BAD_REQUEST);
+        else
+            return new ResponseEntity<String>(HttpStatus.OK);
     }
 }
-}
+
