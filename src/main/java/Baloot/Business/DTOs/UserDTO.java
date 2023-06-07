@@ -14,11 +14,8 @@ public class UserDTO {
     @NonNull
 
     public String username;
-    @NonNull
     public String password;
 
-
-    @Email
     public String email;
     public String birthDate;
     public String address;

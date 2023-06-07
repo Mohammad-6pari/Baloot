@@ -1,17 +1,14 @@
 package Baloot.Controllers;
 
 import Baloot.Business.DTOs.UserDTO;
-import Baloot.Data.Entity.Commodity;
-import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
+import Baloot.Data.Services.Jwt;
 import lombok.RequiredArgsConstructor;
 import org.json.JSONObject;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Map;
 
 @RestController
 @RequiredArgsConstructor
@@ -33,8 +30,12 @@ public class LoginController {
             return new ResponseEntity<String>(HttpStatus.BAD_REQUEST);
         else if (res.equals(401))
             return new ResponseEntity<String>("username or password is wrong",HttpStatus.BAD_REQUEST);
-        else
-            return new ResponseEntity<String>(HttpStatus.OK);
+        else {
+            String token = Jwt.generateToken(userDto.username);
+            JSONObject resp = new JSONObject();
+            resp.put("token", token);
+            return new ResponseEntity<String>(resp.toString(),HttpStatus.OK);
+        }
     }
 }
 

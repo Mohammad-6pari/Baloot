@@ -21,14 +21,11 @@ public class AddNewUserController {
     public ResponseEntity<?> postLogin(@Valid @RequestBody UserDTO user) {
         var contextManager = ContextLoader.getContextManager();
 
-
-
         var res = contextManager.addNewUser(user);
         if (res == null) {
             return new ResponseEntity<String>("register failed",HttpStatus.UNAUTHORIZED);
         }else{
-            System.out.println(res);
-            return new ResponseEntity<String>("login successful", HttpStatus.OK);
+            return new ResponseEntity<String>(HttpStatus.OK);
         }
     }
 }

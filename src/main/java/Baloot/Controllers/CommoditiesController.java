@@ -24,9 +24,9 @@ public class CommoditiesController {
     public ResponseEntity<?> commodities(@RequestParam Map<String, String> req) {
         var contextManager = ContextLoader.getContextManager();
         var user = contextManager.getLoggedinUser();
-        if (user == null) {
-            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
-        } else {
+//        if (user == null) {
+//            return new ResponseEntity<String>(HttpStatus.UNAUTHORIZED);
+//        } else {
             var searchBy = req.get("searchBy");
             var query = req.get("q");
             var sortBy = req.get("sortBy");
@@ -45,6 +45,6 @@ public class CommoditiesController {
             JSONObject resp = new JSONObject();
             resp.put("commodities", commodities);
             return new ResponseEntity<String>(resp.toString(), HttpStatus.OK);
-        }
+//        }
     }
 }

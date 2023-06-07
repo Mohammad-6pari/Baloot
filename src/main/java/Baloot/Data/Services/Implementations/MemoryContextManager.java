@@ -159,7 +159,7 @@ public class MemoryContextManager implements IContextManager {
     @Override
     public User addNewUser(UserDTO userDTO) {
 
-        final User user = new User(userDTO.username, String.valueOf(userDTO.password.hashCode()), userDTO.email, userDTO.birthDate, userDTO.address, userDTO.credit);
+        final User user = new User(userDTO.username, String.valueOf(userDTO.password), userDTO.email, userDTO.birthDate, userDTO.address, userDTO.credit);
         users.add(user);
         return user;
     }
