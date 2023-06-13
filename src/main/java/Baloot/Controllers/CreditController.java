@@ -1,7 +1,5 @@
 package Baloot.Controllers;
 
-import Baloot.Data.Entity.Commodity;
-import Baloot.Data.Entity.User;
 import Baloot.Data.Services.ContextLoader;
 
 import lombok.RequiredArgsConstructor;

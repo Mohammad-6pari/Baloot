@@ -43,11 +43,10 @@ build/
 *.nar
 hs_err_pid*
 replay_pid*
-
 ##############################
 ## Maven
 ##############################
-target/classes/
+target/classes/*
 target/maven-archiver/
 target/maven-status/
 *.jar.original
