@@ -21,7 +21,7 @@ public class GetBuyListByUsername extends Command {
     public Response execute(IContextManager contextManager) {
         List<Commodity> items = contextManager.getBuyListByUsername(this.data);
 
-        List<CommodityResultDTO> resultItems = items.stream().map(item -> new CommodityResultDTO(item)).toList();
+        List<CommodityResultDTO> resultItems = items.stream().map(item -> new CommodityResultDTO(item)).collect(Collectors.toList());
         JSONObject json = new JSONObject();
         JSONArray jsonArr = new JSONArray();
         for(CommodityResultDTO item:resultItems){

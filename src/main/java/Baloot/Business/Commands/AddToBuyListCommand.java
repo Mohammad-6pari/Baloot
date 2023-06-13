@@ -32,6 +32,7 @@ public class AddToBuyListCommand extends Command {
             json.put("errorMessage", "This buy list item already exists");
             return new Response(ResponseStatus.FAILURE, json);
         }
-        return new Response(ResponseStatus.SUCCESS, contextManager.addToBuyList(this.data).toJson());
+        contextManager.addToBuyList(this.data);
+        return new Response(ResponseStatus.SUCCESS, new JSONObject());
     }
 }
