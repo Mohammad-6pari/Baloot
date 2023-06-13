@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Baloot:war exploded" />
+      <artifact name="Baloot:jar" />
     </artifacts-to-build>
   </component>
   <component name="AutoImportSettings">
@@ -10,24 +10,148 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4324fe0-5133-4f3a-87fc-bb16ac43f352" name="Changes" comment="controllers fixed">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Baloot_war_exploded.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Business/DTOs/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/AddToBuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/AddToBuyListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/BuyListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/BuyListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommoditiesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommoditiesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CommodityController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CreditController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/CreditController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/DiscountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/DiscountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/LogoutController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Controllers/PaymentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/IContextManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Data/Services/Implementations/MemoryContextManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/400.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/BuyList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Commodities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Commodity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Commodity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Credit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Credit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/200.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/400.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/403.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/404.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/AddCommodityCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/AddProviderCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/AddToBuyListCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/AddUserCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/AddUserCredit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetBuyListByUsername.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetCommoditiesByCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetCommoditiesByPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetCommoditiesListCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetCommodityById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetProviderById.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/GetUserByUsername.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/InvalidCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/RateCommodityCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/RemoveBuyListItemCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/Commands/VoteCommentCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/BuyListItemDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/CommodityDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/CommodityResultDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/ProviderDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/RateCommodityDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Business/DTOs/UserDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Controllers/HomeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/BuyListItem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/Comment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/CommentVote.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/Commodity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/CommodityRate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/IEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/Provider.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/IContextManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Presentation/Commands.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Presentation/IView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Presentation/Implementations/ConsoleView.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Presentation/Response.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Baloot/Presentation/ResponseStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/BuyList.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Commodities.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Commodity.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Commodity.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Credit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Credit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/Login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/META-INF/context.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/classes/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/annotations-13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/gson-2.10.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/guava-20.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/javalin-4.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/javassist-3.21.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-client-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-http-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-io-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-security-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-server-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-servlet-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-util-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-util-ajax-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-webapp-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jetty-xml-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/jsoup-1.14.3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/kotlin-stdlib-1.6.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/kotlin-stdlib-common-1.6.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/kotlin-stdlib-jdk7-1.6.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/kotlin-stdlib-jdk8-1.6.21.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/lombok-1.18.24.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/reflections-0.9.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/slf4j-api-1.7.36.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/slf4j-simple-1.7.31.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/websocket-api-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/websocket-client-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/websocket-common-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/websocket-server-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/lib/websocket-servlet-9.4.48.v20220622.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Baloot_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Baloot/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Command.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Command.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddCommodityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddCommodityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddProviderCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddProviderCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddToBuyListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddToBuyListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCredit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/AddUserCredit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetBuyListByUsername.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetBuyListByUsername.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByCategory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByCategory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByPrice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesByPrice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesListCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommoditiesListCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommodityById.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetCommodityById.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetProviderById.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetProviderById.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetUserByUsername.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/GetUserByUsername.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/InvalidCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/InvalidCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RateCommodityCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RateCommodityCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RemoveBuyListItemCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/RemoveBuyListItemCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/VoteCommentCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/Commands/VoteCommentCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/BuyListItemDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/BuyListItemDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityResultDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/CommodityResultDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/ProviderDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/ProviderDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/RateCommodityDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/RateCommodityDTO.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/UserDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Business/DTOs/UserDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/BuyListItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/BuyListItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Category.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Category.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommentVote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommentVote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Commodity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Commodity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommodityRate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/CommodityRate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Provider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/Provider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Entity/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/IContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/IContextManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Data/Services/Implementations/MemoryContextManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Commands.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Commands.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/IView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/IView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Implementations/ConsoleView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Implementations/ConsoleView.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Response.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/Response.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Baloot/Presentation/ResponseStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Baloot/Presentation/ResponseStatus.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,26 +193,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;phase3&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/MohammadMehdi/Project/Baloot3&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.new.ui&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "phase3",
+    "last_opened_file_path": "/Users/MohammadMehdi/Project/Baloot3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.new.ui",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
