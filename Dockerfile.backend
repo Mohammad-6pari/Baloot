@@ -1,0 +1,7 @@
+FROM eclipse-temurin:17-jdk-alpine
+VOLUME /tmp
+COPY /target/Baloot.jar /Baloot.jar
+ENTRYPOINT ["java","-jar","/Baloot.jar"]
+
+# docker build -f Dockerfile.backend -t backend .
+# docker run -p 8080:8080 backend
